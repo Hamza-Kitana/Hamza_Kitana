@@ -26,14 +26,14 @@ export const FloatingNav = ({ onSectionChange, activeSection }: FloatingNavProps
       initial={{ opacity: 0, x: -50 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.8, delay: 1.2 }}
-      className="fixed left-8 top-1/2 -translate-y-1/2 z-50 hidden lg:block"
+      className="fixed left-4 sm:left-6 lg:left-8 top-1/2 -translate-y-1/2 z-50 hidden md:block"
     >
       <div className="flex flex-col gap-4">
         {navItems.map((item, index) => (
           <motion.button
             key={item.id}
             onClick={() => handleSectionClick(item.id)}
-            className={`group relative p-4 rounded-full transition-all duration-500 ${
+            className={`group relative p-3 sm:p-4 rounded-full transition-all duration-500 ${
               activeSection === item.id
                 ? 'bg-primary text-primary-foreground shadow-[0_0_30px_hsl(var(--primary)/0.6)] scale-110'
                 : 'bg-card/80 backdrop-blur-sm text-muted-foreground hover:bg-card hover:text-foreground border border-border hover:scale-105'
@@ -57,7 +57,7 @@ export const FloatingNav = ({ onSectionChange, activeSection }: FloatingNavProps
               ease: "easeOut"
             }}
           >
-            <item.icon className="w-6 h-6" />
+            <item.icon className="w-5 h-5 sm:w-6 sm:h-6" />
             
             {/* Tooltip */}
             <motion.div

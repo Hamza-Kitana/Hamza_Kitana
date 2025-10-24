@@ -35,10 +35,10 @@ export const AboutMe = () => {
           viewport={{ once: true }}
           className="text-center mb-16 space-y-4"
         >
-          <h2 className="text-4xl md:text-6xl font-bold">
+          <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold">
             <span className="text-gradient glow-text">About Me</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Results-driven Full Stack Web Developer & Marketing Manager with extensive experience 
             in building scalable enterprise solutions
           </p>

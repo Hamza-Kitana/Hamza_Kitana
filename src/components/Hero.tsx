@@ -20,9 +20,9 @@ export const Hero = () => {
   ];
 
   return (
-    <section className="min-h-screen flex items-center justify-center px-4 relative">
+    <section className="min-h-screen flex items-center justify-center px-4 py-8 relative">
       <div className="container mx-auto max-w-6xl">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -30,7 +30,7 @@ export const Hero = () => {
             className="space-y-6"
           >
             <motion.h1 
-              className="text-5xl md:text-7xl font-bold"
+              className="text-4xl sm:text-5xl md:text-7xl font-bold"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
@@ -39,7 +39,7 @@ export const Hero = () => {
             </motion.h1>
             
             <motion.p 
-              className="text-4xl md:text-5xl text-secondary glow-text inline-block leading-tight py-2"
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-secondary glow-text inline-block leading-tight py-2"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
@@ -48,7 +48,7 @@ export const Hero = () => {
             </motion.p>
             
             <motion.p 
-              className="text-xl md:text-2xl text-muted-foreground"
+              className="text-lg sm:text-xl md:text-2xl text-muted-foreground"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
@@ -57,7 +57,7 @@ export const Hero = () => {
             </motion.p>
             
             <motion.p 
-              className="text-lg text-muted-foreground leading-relaxed"
+              className="text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7 }}
@@ -67,7 +67,7 @@ export const Hero = () => {
             </motion.p>
 
             <motion.div 
-              className="flex flex-wrap gap-4"
+              className="flex flex-wrap gap-3 sm:gap-4"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.9 }}
@@ -78,13 +78,13 @@ export const Hero = () => {
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 rounded-xl bg-card border border-border hover:border-primary transition-all duration-300 hover:shadow-[0_0_20px_hsl(var(--primary)/0.3)]"
+                  className="p-2 sm:p-3 rounded-xl bg-card border border-border hover:border-primary transition-all duration-300 hover:shadow-[0_0_20px_hsl(var(--primary)/0.3)]"
                   whileHover={{ scale: 1.1, rotate: 5 }}
                   initial={{ opacity: 0, scale: 0 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 0.9 + index * 0.1 }}
                 >
-                  <social.icon className="w-6 h-6 text-primary" />
+                  <social.icon className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
                 </motion.a>
               ))}
             </motion.div>
@@ -96,7 +96,7 @@ export const Hero = () => {
             >
               <Button 
                 size="lg" 
-                className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 text-primary-foreground"
+                className="w-full sm:w-auto bg-gradient-to-r from-primary to-secondary hover:opacity-90 text-primary-foreground"
                 asChild
               >
                 <a href="/Hamza_Kitana_CV.pdf" download>
@@ -113,13 +113,13 @@ export const Hero = () => {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="relative"
           >
-            <div className="relative w-full max-w-md mx-auto">
-              <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent rounded-3xl animate-pulse opacity-20 blur-3xl" />
-              <div className="relative rounded-3xl w-full bg-card/20 border-2 border-primary/30 shadow-[0_0_50px_hsl(var(--primary)/0.3)] overflow-hidden">
+            <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md mx-auto">
+              <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent rounded-2xl sm:rounded-3xl animate-pulse opacity-20 blur-3xl" />
+              <div className="relative rounded-2xl sm:rounded-3xl w-full bg-card/20 border-2 border-primary/30 shadow-[0_0_50px_hsl(var(--primary)/0.3)] overflow-hidden">
                 <img
                   src={profileImage}
                   alt="Hamza Kitana"
-                  className="w-full h-auto object-contain p-4"
+                  className="w-full h-auto object-contain p-3 sm:p-4"
                 />
               </div>
             </div>
