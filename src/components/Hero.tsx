@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { Github, Linkedin, Facebook, Instagram, MessageCircle, Download } from 'lucide-react';
 import { Button } from './ui/button';
 import profileImage from '@/assets/hamza-photo.png';
+import ProfileCard from './ProfileCard';
 
 // Discord icon component
 const DiscordIcon = () => (
@@ -108,20 +109,27 @@ export const Hero = () => {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
+            initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.3 }}
             className="relative"
           >
             <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md mx-auto">
-              <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent rounded-2xl sm:rounded-3xl animate-pulse opacity-20 blur-3xl" />
-              <div className="relative rounded-2xl sm:rounded-3xl w-full bg-card/20 border-2 border-primary/30 shadow-[0_0_50px_hsl(var(--primary)/0.3)] overflow-hidden">
-                <img
-                  src={profileImage}
-                  alt="Hamza Kitana"
-                  className="w-full h-auto object-contain p-3 sm:p-4"
-                />
-              </div>
+              <ProfileCard
+                className="pc-details-bottom"
+                name="Hamza Kitana"
+                title="Software Engineering"
+                handle="Hamza-Kitana"
+                status="Online"
+                contactText="Contact Me"
+                avatarUrl={profileImage}
+                showUserInfo={false}
+                enableTilt={true}
+                enableMobileTilt={false}
+                onContactClick={() => {
+                  window.location.href = 'mailto:hamzanael@hotmail.com';
+                }}
+              />
             </div>
           </motion.div>
         </div>
