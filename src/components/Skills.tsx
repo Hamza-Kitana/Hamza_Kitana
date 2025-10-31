@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Card } from './ui/card';
+import SpotlightCard from './SpotlightCard';
 import { Badge } from './ui/badge';
 import { softSkills, hardSkills } from '@/data/skills';
 import { Brain, Code, Zap } from 'lucide-react';
@@ -30,7 +30,7 @@ export const Skills = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <Card className="p-8 bg-card/50 backdrop-blur-sm border-border">
+            <SpotlightCard className="p-8 bg-card/50 backdrop-blur-sm border border-border" spotlightColor="rgba(0, 229, 255, 0.15)">
               <div className="flex items-center gap-3 mb-6">
                 <div className="p-3 rounded-xl bg-accent/10 text-accent">
                   <Brain className="w-6 h-6" />
@@ -56,7 +56,7 @@ export const Skills = () => {
                   </motion.div>
                 ))}
               </div>
-            </Card>
+            </SpotlightCard>
           </motion.div>
 
           {/* Hard Skills */}
@@ -69,7 +69,7 @@ export const Skills = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: groupIndex * 0.1 }}
               >
-                <Card className="p-6 bg-card/50 backdrop-blur-sm border-border hover:border-primary/50 transition-all duration-300 h-full">
+                <SpotlightCard className="p-6 bg-card/50 backdrop-blur-sm border border-border hover:border-primary/50 transition-all duration-300 h-full" spotlightColor="rgba(0, 229, 255, 0.12)">
                   <div className="flex items-start gap-3 mb-4">
                     <div className="p-2 rounded-lg bg-primary/10 text-primary mt-1">
                       {groupIndex % 2 === 0 ? <Code className="w-5 h-5" /> : <Zap className="w-5 h-5" />}
@@ -94,7 +94,7 @@ export const Skills = () => {
                       </motion.div>
                     ))}
                   </div>
-                </Card>
+                </SpotlightCard>
               </motion.div>
             ))}
           </div>

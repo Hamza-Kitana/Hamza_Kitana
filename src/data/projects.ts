@@ -8,6 +8,7 @@ import project7 from '@/assets/project-7-crm.jpg';
 import project8 from '@/assets/project-8-realestate.jpg';
 import project9 from '@/assets/project-9-almohra.jpg';
 import project10 from '@/assets/project-10-transport.jpg';
+import project11 from '@/assets/project-11-bus-rental.jpg';
 
 export interface Project {
   id: number;
@@ -250,6 +251,36 @@ export const projects: Project[] = [
       "Reduced trip distribution confusion",
       "Improved admin-driver communication",
       "Increased driver schedule compliance"
+    ]
+  },
+  {
+    id: 11,
+    title: "International Fleet Bus Rental",
+    subtitle: "Modern Bilingual Bus Rental Platform",
+    description: "A modern, responsive website for International Fleet Bus Rental company in Rusaifah, Jordan. Features bilingual interface (Arabic/English), contemporary design, dark mode support, and comprehensive bus rental services for corporate, domestic, and international trips.",
+    technologies: ["React", "TypeScript", "Vite", "Tailwind CSS", "Shadcn/UI", "TanStack Query", "React Router"],
+    image: project11,
+    details: [
+      "Fully responsive design with mobile-first approach and beautiful UI using Tailwind CSS",
+      "Complete bilingual support (Arabic/English) with RTL/LTR switching",
+      "Dark mode support with seamless theme switching",
+      "Four main service categories: Corporate Transport, Domestic Trips, International Trips, and Private Rentals",
+      "Interactive contact cards with hover effects and dynamic animations",
+      "Performance optimized with Vite build system and lazy loading",
+      "Services gallery with overlay effects and smooth animations",
+      "Accessibility features following modern web standards",
+      "Rain particle animations in about section for enhanced visual appeal"
+    ],
+    challenges: [
+      "Implementing seamless bilingual experience with proper RTL support for Arabic",
+      "Optimizing performance for mobile devices while maintaining rich animations",
+      "Creating accessible dark mode that works across all components"
+    ],
+    results: [
+      "Professional bilingual website attracting both local and international clients",
+      "Enhanced user engagement with interactive UI elements and smooth animations",
+      "Improved mobile experience with optimized performance",
+      "Increased quote requests through intuitive contact forms"
     ]
   }
 ];

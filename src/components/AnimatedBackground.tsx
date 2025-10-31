@@ -5,7 +5,7 @@ import * as THREE from 'three';
 
 function Particles() {
   const ref = useRef<THREE.Points>(null);
-  const particlesCount = 5000;
+  const particlesCount = 1500; // Reduced from 5000 for better performance
   
   const positions = new Float32Array(particlesCount * 3);
   for (let i = 0; i < particlesCount; i++) {
@@ -36,11 +36,20 @@ function Particles() {
 }
 
 export const AnimatedBackground = () => {
+  // Check if device supports high performance
+  const isLowPerformance = /Mobile|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  
   return (
     <div className="fixed inset-0 -z-10">
-      <Canvas camera={{ position: [0, 0, 1] }}>
-        <Particles />
-      </Canvas>
+      {!isLowPerformance && (
+        <Canvas 
+          camera={{ position: [0, 0, 1] }}
+          dpr={[1, 1.5]} // Limit pixel ratio for performance
+          performance={{ min: 0.5 }} // Allow throttling on slow devices
+        >
+          <Particles />
+        </Canvas>
+      )}
       <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/80 to-background" />
     </div>
   );

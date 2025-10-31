@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Card } from './ui/card';
+import SpotlightCard from './SpotlightCard';
 import { Badge } from './ui/badge';
 import { experiences } from '@/data/experience';
 import { Building2, MapPin, Calendar, CheckCircle2 } from 'lucide-react';
@@ -39,7 +39,7 @@ export const Experience = () => {
                 {/* Timeline dot */}
                 <div className="hidden md:block absolute left-1/2 top-8 w-4 h-4 bg-primary rounded-full transform -translate-x-1/2 shadow-[0_0_20px_hsl(var(--primary))] z-10" />
 
-                <Card className="p-6 md:p-8 bg-card/50 backdrop-blur-sm border-border hover:border-primary transition-all duration-500 relative overflow-hidden group">
+                <SpotlightCard className="p-6 md:p-8 bg-card/50 backdrop-blur-sm border border-border hover:border-primary transition-all duration-500 relative overflow-hidden group" spotlightColor="rgba(0, 229, 255, 0.12)">
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   
                   <div className="relative space-y-4">
@@ -85,7 +85,7 @@ export const Experience = () => {
                       ))}
                     </div>
                   </div>
-                </Card>
+                </SpotlightCard>
               </motion.div>
             ))}
           </div>

@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
-import { Card } from './ui/card';
+import SpotlightCard from './SpotlightCard';
 import type { Project } from '@/data/projects';
 
 interface ProjectCardProps {
@@ -18,9 +18,10 @@ export const ProjectCard = ({ project, index, onClick }: ProjectCardProps) => {
       transition={{ duration: 0.5, delay: index * 0.1 }}
       whileHover={{ y: -10 }}
     >
-      <Card 
-        className="group cursor-pointer relative overflow-hidden bg-card/50 backdrop-blur-sm border-border hover:border-primary transition-all duration-500 h-full"
+      <SpotlightCard 
+        className="group cursor-pointer relative overflow-hidden h-full bg-card/50 backdrop-blur-sm border border-border hover:border-primary transition-all duration-500"
         onClick={onClick}
+        spotlightColor="rgba(0, 229, 255, 0.18)"
       >
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
         
@@ -28,6 +29,7 @@ export const ProjectCard = ({ project, index, onClick }: ProjectCardProps) => {
           <img 
             src={project.image} 
             alt={project.title}
+            loading="lazy"
             className="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-110 bg-card/20 p-2"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-card via-card/50 to-transparent pointer-events-none" />
@@ -87,7 +89,7 @@ export const ProjectCard = ({ project, index, onClick }: ProjectCardProps) => {
         </div>
 
         <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-accent to-secondary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
-      </Card>
+      </SpotlightCard>
     </motion.div>
   );
 };

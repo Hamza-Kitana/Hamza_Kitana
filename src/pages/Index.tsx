@@ -28,15 +28,12 @@ const Index = () => {
         <AnimatePresence mode="wait">
           <motion.div
             key={activeSection}
-            initial={{ opacity: 0, x: 50, scale: 0.95, rotateY: 15 }}
-            animate={{ opacity: 1, x: 0, scale: 1, rotateY: 0 }}
-            exit={{ opacity: 0, x: -50, scale: 0.95, rotateY: -15 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
             transition={{ 
-              duration: 0.8, 
-              ease: [0.4, 0, 0.2, 1],
-              type: "spring",
-              stiffness: 100,
-              damping: 20
+              duration: 0.3,
+              ease: "easeInOut"
             }}
           >
           {activeSection === 'home' && (
