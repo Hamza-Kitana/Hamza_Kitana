@@ -282,5 +282,36 @@ export const projects: Project[] = [
       "Improved mobile experience with optimized performance",
       "Increased quote requests through intuitive contact forms"
     ]
+  },
+  {
+    id: 12,
+    title: "Alternative Energy Summit & Awards 2026",
+    subtitle: "Conference & Awards Website - Dubai, UAE",
+    description: "A professional, modern website for the Alternative Energy Summit & Awards 2026 in Dubai. Showcases full conference details, animated statistics, sponsors, awards categories, and a complete registration flow.",
+    technologies: ["React", "TypeScript", "Vite", "Tailwind CSS", "Shadcn/UI", "Framer Motion", "React Router"],
+    image: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=1200&h=800&fit=crop&q=80",
+    details: [
+      "Home: Hero with event title/date, animated stats (e.g., 800+ attendees, 65+ speakers), sponsors marquee",
+      "Expected Participation: large counters with icons, clean responsive layout",
+      "Who Will Attend: interactive company logo circles with info on click",
+      "Job Titles Expected: dual auto-scrolling marquees for targeted roles",
+      "Who Should Sponsor: tilted sponsor-type cards with hover effects",
+      "Ideal Sponsors: moving marquee of ideal sponsor logos",
+      "Video Section: muted background video overlayed with auto-incrementing KPIs",
+      "Happenings: 2-day agenda schedule and upcoming initiatives",
+      "Speakers & Partners: structured sections (Coming Soon) ready for data",
+      "Awards: categorized sections (Individual, Private, Public, Project Awards) with clear CTAs",
+      "Register: full attendee form (personal/company info, interests) with validation"
+    ],
+    challenges: [
+      "Designing rich animations and marquees without hurting performance across devices",
+      "Maintaining accessibility and SEO while using heavy visual effects",
+      "Structuring content for future data integrations (speakers, partners, agenda)"
+    ],
+    results: [
+      "Polished conference presence with clear information architecture",
+      "High engagement via interactive sections and smooth motion design",
+      "Scalable foundation for content updates and sponsor onboarding"
+    ]
   }
 ];
