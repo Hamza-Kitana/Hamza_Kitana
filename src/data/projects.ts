@@ -313,5 +313,224 @@ export const projects: Project[] = [
       "High engagement via interactive sections and smooth motion design",
       "Scalable foundation for content updates and sponsor onboarding"
     ]
+  },
+  {
+    id: 13,
+    title: "Applkanji Company System",
+    subtitle: "Complete Integrated Company Platform",
+    description: "A comprehensive full-stack system for Applkanji company with complete custom design from scratch, featuring all company operations and management modules.",
+    technologies: ["React", "TypeScript", "C# .NET", "SQL Server", "Tailwind CSS"],
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=800&fit=crop&q=80",
+    details: [
+      "Complete custom design and UI/UX from scratch",
+      "Full-stack application with React frontend and C# .NET backend",
+      "Comprehensive company management modules",
+      "User-friendly interface with modern design principles",
+      "Responsive design for all devices"
+    ],
+    challenges: [
+      "Creating a cohesive design system from scratch",
+      "Integrating multiple modules into a unified platform"
+    ],
+    results: [
+      "Professional company system with custom design",
+      "Improved operational efficiency and user experience"
+    ]
+  },
+  {
+    id: 14,
+    title: "Domestic Workers Management System",
+    subtitle: "Mobile App & Web Dashboard",
+    description: "Complete mobile application for domestic workers (housekeeping services) management system with a beautiful web dashboard for administration and monitoring.",
+    technologies: ["React Native", "React", "C# .NET", "SQL Server", "Mobile App"],
+    image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=1200&h=800&fit=crop&q=80",
+    details: [
+      "Mobile application for workers and clients",
+      "Beautiful web dashboard for administration",
+      "Worker scheduling and assignment management",
+      "Real-time tracking and status updates",
+      "Payment and billing integration",
+      "Rating and review system"
+    ],
+    challenges: [
+      "Synchronizing data between mobile app and web dashboard",
+      "Creating intuitive mobile UX for workers"
+    ],
+    results: [
+      "Streamlined domestic services management",
+      "Improved client satisfaction and worker efficiency"
+    ]
+  },
+  {
+    id: 15,
+    title: "Inventory Management System",
+    subtitle: "Mobile App & Web Dashboard",
+    description: "Complete inventory management system with mobile application and comprehensive web dashboard for tracking, managing, and reporting on product inventory.",
+    technologies: ["React Native", "React", "C# .NET", "SQL Server", "Barcode Scanner"],
+    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&h=800&fit=crop&q=80",
+    details: [
+      "Mobile app for inventory scanning and updates",
+      "Web dashboard for comprehensive inventory management",
+      "Barcode scanning and QR code support",
+      "Real-time inventory tracking",
+      "Stock alerts and notifications",
+      "Comprehensive reporting and analytics",
+      "Multi-warehouse support"
+    ],
+    challenges: [
+      "Real-time synchronization between mobile and web",
+      "Handling large inventory datasets efficiently"
+    ],
+    results: [
+      "Accurate inventory tracking and reduced stockouts",
+      "Improved operational efficiency"
+    ]
+  },
+  {
+    id: 16,
+    title: "Student & Teacher Management System",
+    subtitle: "Educational Platform with Quizzes",
+    description: "Complete educational system where teachers can assign quizzes and study materials to students, with admin panel for oversight and management.",
+    technologies: ["React", "C# .NET", "SQL Server", "Educational Platform"],
+    image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1200&h=800&fit=crop&q=80",
+    details: [
+      "Teacher dashboard for creating quizzes and assignments",
+      "Student portal for accessing materials and taking quizzes",
+      "Admin panel for system oversight and user management",
+      "Quiz creation and grading system",
+      "Study materials distribution",
+      "Progress tracking and analytics",
+      "Notification system for assignments and deadlines"
+    ],
+    challenges: [
+      "Creating intuitive quiz creation interface",
+      "Managing student progress and performance data"
+    ],
+    results: [
+      "Streamlined educational workflow",
+      "Improved student engagement and teacher efficiency"
+    ]
+  },
+  {
+    id: 17,
+    title: "Portfolio Websites Collection",
+    subtitle: "Personal Portfolio Websites",
+    description: "Multiple professional portfolio websites created for various individuals, showcasing their work, skills, and achievements with modern, responsive designs.",
+    technologies: ["React", "TypeScript", "Tailwind CSS", "Vite", "Portfolio Design"],
+    image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=1200&h=800&fit=crop&q=80",
+    details: [
+      "Custom portfolio designs for multiple clients",
+      "Responsive and modern UI/UX",
+      "Project showcases and galleries",
+      "Contact forms and social media integration",
+      "SEO optimization",
+      "Fast loading and performance optimized"
+    ],
+    challenges: [
+      "Creating unique designs for each portfolio",
+      "Balancing creativity with professional presentation"
+    ],
+    results: [
+      "Professional online presence for clients",
+      "Increased visibility and opportunities"
+    ]
+  },
+  {
+    id: 18,
+    title: "Ansam Company Website",
+    subtitle: "Professional Corporate Website",
+    description: "Professional corporate website for Ansam company featuring company information, services, portfolio, and contact details with modern design.",
+    technologies: ["React", "TypeScript", "Tailwind CSS", "Corporate Design"],
+    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&h=800&fit=crop&q=80",
+    details: [
+      "Professional corporate design",
+      "Company services and portfolio showcase",
+      "About us and team sections",
+      "Contact forms and location integration",
+      "Responsive design for all devices",
+      "SEO optimized"
+    ],
+    challenges: [
+      "Creating professional corporate identity",
+      "Showcasing company value proposition effectively"
+    ],
+    results: [
+      "Enhanced company online presence",
+      "Increased brand recognition and inquiries"
+    ]
+  },
+  {
+    id: 19,
+    title: "Multi-Company Accounting System",
+    subtitle: "Enterprise Accounting Platform",
+    description: "Complete accounting system designed to handle multiple companies, featuring comprehensive financial management, reporting, and multi-tenant architecture.",
+    technologies: ["C# .NET", "SQL Server", "React", "Accounting Software"],
+    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200&h=800&fit=crop&q=80",
+    details: [
+      "Multi-company/tenant architecture",
+      "Complete accounting modules (General Ledger, Accounts Payable/Receivable)",
+      "Financial reporting and analytics",
+      "Invoice management and generation",
+      "Expense tracking and categorization",
+      "User role management per company",
+      "Data isolation and security between companies"
+    ],
+    challenges: [
+      "Implementing secure multi-tenant architecture",
+      "Handling complex accounting calculations and validations"
+    ],
+    results: [
+      "Efficient accounting management for multiple companies",
+      "Accurate financial reporting and compliance"
+    ]
+  },
+  {
+    id: 20,
+    title: "Car Garage Management System",
+    subtitle: "Automotive Service & Repair Tracking",
+    description: "Complete system for car garages to track vehicle repairs, missing parts, entry/exit times, and service history for each vehicle.",
+    technologies: ["React", "C# .NET", "SQL Server", "Mobile App"],
+    image: "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=1200&h=800&fit=crop&q=80",
+    details: [
+      "Vehicle entry and exit tracking",
+      "Service history and repair records",
+      "Parts inventory and missing parts tracking",
+      "Customer management and vehicle profiles",
+      "Service estimates and invoicing",
+      "Technician assignment and workflow",
+      "Status tracking (in-progress, completed, waiting for parts)"
+    ],
+    challenges: [
+      "Tracking complex repair workflows",
+      "Managing parts inventory and availability"
+    ],
+    results: [
+      "Improved garage operations efficiency",
+      "Better customer service and transparency"
+    ]
+  },
+  {
+    id: 21,
+    title: "Dakakin Baladna Palestinian Event",
+    subtitle: "Event Website - Palestinian Shops",
+    description: "Professional event website for 'Dakakin Baladna' Palestinian event showcasing local shops, vendors, and event information.",
+    technologies: ["React", "TypeScript", "Tailwind CSS", "Event Website"],
+    image: "https://images.unsplash.com/photo-1511578314322-379afb476865?w=1200&h=800&fit=crop&q=80",
+    details: [
+      "Event information and schedule",
+      "Vendor and shop showcase",
+      "Interactive event map",
+      "Registration and ticketing",
+      "Social media integration",
+      "Responsive design for mobile and desktop"
+    ],
+    challenges: [
+      "Showcasing multiple vendors effectively",
+      "Creating engaging event presentation"
+    ],
+    results: [
+      "Successful event promotion and engagement",
+      "Increased event attendance and vendor visibility"
+    ]
   }
 ];

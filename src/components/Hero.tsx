@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Facebook, Instagram, MessageCircle, Download } from 'lucide-react';
+import { Github, Linkedin, Facebook, Instagram, MessageCircle, Download, GraduationCap, BookOpen, Users } from 'lucide-react';
 import { Button } from './ui/button';
-import profileImage from '@/assets/hamza-photo.png';
+import { Card } from './ui/card';
+import profileImage from '/me.png';
 import ProfileCard from './ProfileCard';
 
 // Discord icon component
@@ -66,6 +67,45 @@ export const Hero = () => {
               Specialized in C# .NET, React.js, Android Studio, and creating innovative solutions 
               for ERP, CRM, and E-commerce systems. Based in Dubai, UAE.
             </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.8 }}
+              className="mt-6"
+            >
+              <Card className="p-4 sm:p-5 bg-gradient-to-r from-primary/10 via-secondary/10 to-primary/10 border-primary/20 backdrop-blur-sm hover:border-primary/40 transition-all duration-300">
+                <div className="flex items-start gap-4">
+                  <div className="p-2 sm:p-3 rounded-xl bg-gradient-to-br from-primary/20 to-secondary/20 text-primary flex-shrink-0">
+                    <GraduationCap className="w-5 h-5 sm:w-6 sm:h-6" />
+                  </div>
+                  <div className="flex-1 space-y-2">
+                    <div className="flex items-center gap-2 flex-wrap">
+                      <h3 className="text-base sm:text-lg font-semibold text-foreground">
+                        Lecturer & Mentor
+                      </h3>
+                      <span className="px-2 py-1 text-xs rounded-full bg-primary/20 text-primary font-medium">
+                        Available
+                      </span>
+                    </div>
+                    <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
+                      I deliver programming lectures and life development workshops. Teaching coding skills, 
+                      career building, personal growth, and creating effective life plans.
+                    </p>
+                    <div className="flex flex-wrap gap-3 pt-2">
+                      <div className="flex items-center gap-2 text-xs sm:text-sm text-muted-foreground">
+                        <BookOpen className="w-4 h-4 text-primary" />
+                        <span>Programming</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-xs sm:text-sm text-muted-foreground">
+                        <Users className="w-4 h-4 text-primary" />
+                        <span>Life Development</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Card>
+            </motion.div>
 
             <motion.div 
               className="flex flex-wrap gap-3 sm:gap-4"

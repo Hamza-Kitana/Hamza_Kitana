@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Code2, Briefcase, TrendingUp, Award } from 'lucide-react';
+import { Code2, Briefcase, TrendingUp, Award, GraduationCap } from 'lucide-react';
 import { Card } from './ui/card';
 
 export const AboutMe = () => {
@@ -23,6 +23,11 @@ export const AboutMe = () => {
       icon: Award,
       title: "Project Leadership",
       description: "End-to-end delivery excellence"
+    },
+    {
+      icon: GraduationCap,
+      title: "Lecturer & Mentor",
+      description: "Programming lectures & life development"
     }
   ];
 
@@ -68,6 +73,12 @@ export const AboutMe = () => {
                   Strong problem-solving skills with a history of resolving critical system issues, optimizing 
                   databases, and improving operational efficiency. Adept at collaborating with clients and 
                   cross-functional teams to deliver projects on time and to specification.
+                </span>
+                <span className="block">
+                  Experienced lecturer and mentor, delivering programming lectures and life development workshops. 
+                  Passionate about teaching coding skills, helping others build their careers correctly, identifying 
+                  what's missing in their journey, and creating effective life plans. Committed to sharing knowledge 
+                  and empowering the next generation of developers.
                 </span>
               </p>
             </Card>
