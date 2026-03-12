@@ -140,7 +140,7 @@ export const Hero = () => {
                 className="w-full sm:w-auto bg-gradient-to-r from-primary to-secondary hover:opacity-90 text-primary-foreground"
                 asChild
               >
-                <a href="/Hamza_Kitana_CV.pdf" download>
+                <a href="/Hamza.pdf" download>
                   <Download className="mr-2 h-5 w-5" />
                   Download CV
                 </a>
