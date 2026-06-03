@@ -86,6 +86,15 @@ All colors MUST be HSL.
   }
 
   .section-full {
-    @apply w-full max-w-none ps-14 sm:ps-20 md:ps-24 lg:ps-28 pe-4 sm:pe-6 lg:pe-10 xl:pe-14 2xl:pe-16;
+    @apply w-full max-w-none ps-12 sm:ps-20 md:ps-24 lg:ps-28 pe-3 sm:pe-6 lg:pe-10 xl:pe-14 2xl:pe-16;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
   }
 }

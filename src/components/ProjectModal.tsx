@@ -24,10 +24,10 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
 
   return (
     <Dialog open={!!project} onOpenChange={(open) => { if (!open) onClose(); }}>
-      <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto bg-card/95 backdrop-blur-xl border-primary/30">
+      <DialogContent className="w-[calc(100vw-1rem)] sm:w-full max-w-4xl max-h-[92dvh] overflow-y-auto bg-card/95 backdrop-blur-xl border-primary/30 p-4 sm:p-6 rounded-2xl sm:rounded-lg">
         <DialogHeader>
           <div className="flex items-start justify-between">
-            <div className="space-y-2 flex-1">
+            <div className="space-y-1.5 sm:space-y-2 flex-1 min-w-0">
               <div className="flex flex-wrap gap-2">
                 {project.category === 'featured' && (
                   <motion.div
@@ -49,9 +49,9 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
                 )}
               </div>
 
-              <DialogTitle className="text-3xl font-bold text-gradient pe-8">{title}</DialogTitle>
+              <DialogTitle className="text-xl sm:text-3xl font-bold text-gradient pe-8 leading-tight">{title}</DialogTitle>
 
-              <p className="text-muted-foreground text-lg">{subtitle}</p>
+              <p className="text-muted-foreground text-sm sm:text-lg">{subtitle}</p>
             </div>
           </div>
         </DialogHeader>
@@ -60,7 +60,7 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.05 }}
-          className="relative -mx-6 mt-2 h-48 md:h-56 overflow-hidden rounded-none md:rounded-xl md:mx-0"
+          className="relative -mx-4 sm:-mx-6 mt-2 h-36 sm:h-48 md:h-56 overflow-hidden rounded-xl sm:rounded-xl md:mx-0"
         >
           <img
             src={project.image}
@@ -71,14 +71,14 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
         </motion.div>
 
         <motion.div
-          className="space-y-6 mt-6"
+          className="space-y-4 sm:space-y-6 mt-4 sm:mt-6"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
         >
           <div className="space-y-3">
-            <h3 className="text-xl font-semibold text-foreground">{t.projects.modal.overview}</h3>
-            <p className="text-muted-foreground leading-relaxed">{description}</p>
+            <h3 className="text-base sm:text-xl font-semibold text-foreground">{t.projects.modal.overview}</h3>
+            <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">{description}</p>
           </div>
 
           <div className="space-y-3">
