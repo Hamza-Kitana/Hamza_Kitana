@@ -1,39 +1,22 @@
 import { motion } from 'framer-motion';
 import { Code2, Briefcase, TrendingUp, Award, GraduationCap } from 'lucide-react';
 import { Card } from './ui/card';
+import { useLanguage } from '@/i18n/LanguageContext';
 
 export const AboutMe = () => {
+  const { t } = useLanguage();
+
   const highlights = [
-    {
-      icon: Code2,
-      title: "Full Stack Expert",
-      description: "C# .NET, React.js, Android Studio"
-    },
-    {
-      icon: Briefcase,
-      title: "Enterprise Solutions",
-      description: "ERP, CRM, Payroll, Finance Systems"
-    },
-    {
-      icon: TrendingUp,
-      title: "Marketing Manager",
-      description: "Digital campaigns & automation"
-    },
-    {
-      icon: Award,
-      title: "Project Leadership",
-      description: "End-to-end delivery excellence"
-    },
-    {
-      icon: GraduationCap,
-      title: "Lecturer & Mentor",
-      description: "Programming lectures & life development"
-    }
+    { icon: Code2, ...t.about.highlights.fullStack },
+    { icon: Briefcase, ...t.about.highlights.enterprise },
+    { icon: TrendingUp, ...t.about.highlights.marketing },
+    { icon: Award, ...t.about.highlights.leadership },
+    { icon: GraduationCap, ...t.about.highlights.lecturer },
   ];
 
   return (
-    <section id="about" className="py-20 px-4">
-      <div className="container mx-auto max-w-6xl">
+    <section id="about" className="py-20 w-full">
+      <div className="section-full">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -41,45 +24,28 @@ export const AboutMe = () => {
           className="text-center mb-16 space-y-4"
         >
           <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold">
-            <span className="text-gradient glow-text">About Me</span>
+            <span className="text-gradient glow-text">{t.about.heading}</span>
           </h2>
           <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Results-driven Full Stack Web Developer & Marketing Manager with extensive experience 
-            in building scalable enterprise solutions
+            {t.about.subheading}
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8 mb-12">
+        <div className="grid md:grid-cols-2 xl:grid-cols-12 gap-6 lg:gap-8 mb-12">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
+            className="xl:col-span-5"
           >
             <Card className="p-8 bg-card/50 backdrop-blur-sm border-border h-full">
-              <h3 className="text-2xl font-bold text-gradient mb-6">Professional Summary</h3>
+              <h3 className="text-2xl font-bold text-gradient mb-6">{t.about.summaryTitle}</h3>
               <p className="text-muted-foreground leading-relaxed space-y-4">
-                <span className="block">
-                  Extensive experience in C# .NET, React.js, Android Studio, specializing in ERP, CRM, 
-                  Payroll, Finance, and Retail systems. Skilled in end-to-end project management, from 
-                  requirement gathering and documentation to development, testing, and delivery.
-                </span>
-                <span className="block">
-                  Proven track record in designing e-commerce and corporate websites, implementing automation 
-                  workflows, integrating AI voice systems, and executing marketing campaigns that increase 
-                  user engagement.
-                </span>
-                <span className="block">
-                  Strong problem-solving skills with a history of resolving critical system issues, optimizing 
-                  databases, and improving operational efficiency. Adept at collaborating with clients and 
-                  cross-functional teams to deliver projects on time and to specification.
-                </span>
-                <span className="block">
-                  Experienced lecturer and mentor, delivering programming lectures and life development workshops. 
-                  Passionate about teaching coding skills, helping others build their careers correctly, identifying 
-                  what's missing in their journey, and creating effective life plans. Committed to sharing knowledge 
-                  and empowering the next generation of developers.
-                </span>
+                <span className="block">{t.about.summary1}</span>
+                <span className="block">{t.about.summary2}</span>
+                <span className="block">{t.about.summary3}</span>
+                <span className="block">{t.about.summary4}</span>
               </p>
             </Card>
           </motion.div>
@@ -89,7 +55,7 @@ export const AboutMe = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="space-y-4"
+            className="space-y-4 xl:col-span-7"
           >
             {highlights.map((highlight, index) => (
               <motion.div
@@ -107,7 +73,7 @@ export const AboutMe = () => {
                     </div>
                     <div className="flex-1">
                       <h4 className="text-lg font-semibold mb-1">{highlight.title}</h4>
-                      <p className="text-muted-foreground text-sm">{highlight.description}</p>
+                      <p className="text-muted-foreground text-sm">{highlight.desc}</p>
                     </div>
                   </div>
                 </Card>

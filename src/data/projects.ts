@@ -9,8 +9,12 @@ import project8 from '@/assets/project-8-realestate.jpg';
 import project9 from '@/assets/project-9-almohra.jpg';
 import project10 from '@/assets/project-10-transport.jpg';
 import project11 from '@/assets/project-11-bus-rental.jpg';
+import { featuredProjects, type Project } from './featuredProjects';
+import { locEn, locListEn } from '@/lib/localized';
 
-export interface Project {
+export type { Project };
+
+interface LegacyProject {
   id: number;
   title: string;
   subtitle: string;
@@ -22,7 +26,7 @@ export interface Project {
   image: string;
 }
 
-export const projects: Project[] = [
+const legacyProjectsRaw: LegacyProject[] = [
   {
     id: 1,
     title: "Algorithms Visualization System",
@@ -534,3 +538,17 @@ export const projects: Project[] = [
     ]
   }
 ];
+
+const legacyProjects: Project[] = legacyProjectsRaw.map((p) => ({
+  id: p.id,
+  title: locEn(p.title),
+  subtitle: locEn(p.subtitle),
+  description: locEn(p.description),
+  technologies: p.technologies,
+  details: locListEn(p.details),
+  challenges: locListEn(p.challenges),
+  results: locListEn(p.results),
+  image: p.image,
+}));
+
+export const projects: Project[] = [...featuredProjects, ...legacyProjects];

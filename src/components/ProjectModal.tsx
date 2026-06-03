@@ -1,8 +1,9 @@
-import { motion, AnimatePresence } from 'framer-motion';
-import { X, CheckCircle2, AlertCircle, TrendingUp } from 'lucide-react';
-import { Button } from './ui/button';
+import { motion } from 'framer-motion';
+import { CheckCircle2, AlertCircle, TrendingUp } from 'lucide-react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from './ui/dialog';
 import type { Project } from '@/data/projects';
+import { pick, pickList } from '@/lib/localized';
+import { useLanguage } from '@/i18n/LanguageContext';
 
 interface ProjectModalProps {
   project: Project | null;
@@ -10,50 +11,80 @@ interface ProjectModalProps {
 }
 
 export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
+  const { locale, t } = useLanguage();
+
   if (!project) return null;
 
+  const title = pick(project.title, locale);
+  const subtitle = pick(project.subtitle, locale);
+  const description = pick(project.description, locale);
+  const details = pickList(project.details, locale);
+  const challenges = pickList(project.challenges, locale);
+  const results = pickList(project.results, locale);
+
   return (
-    <Dialog open={!!project} onOpenChange={onClose}>
+    <Dialog open={!!project} onOpenChange={(open) => { if (!open) onClose(); }}>
       <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto bg-card/95 backdrop-blur-xl border-primary/30">
         <DialogHeader>
           <div className="flex items-start justify-between">
             <div className="space-y-2 flex-1">
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                className="inline-block px-4 py-1 rounded-full bg-primary/10 text-primary text-sm font-semibold"
-              >
-                Project {String(project.id).padStart(2, '0')}
-              </motion.div>
-              
-              <DialogTitle className="text-3xl font-bold text-gradient pr-8">
-                {project.title}
-              </DialogTitle>
-              
-              <p className="text-muted-foreground text-lg">
-                {project.subtitle}
-              </p>
+              <div className="flex flex-wrap gap-2">
+                {project.category === 'featured' && (
+                  <motion.div
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    className="inline-block px-4 py-1 rounded-full bg-accent/15 text-accent text-sm font-semibold border border-accent/30"
+                  >
+                    {t.projects.badgeFeatured}
+                  </motion.div>
+                )}
+                {project.category === 'erp' && (
+                  <motion.div
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    className="inline-block px-4 py-1 rounded-full bg-secondary/15 text-secondary text-sm font-semibold border border-secondary/30"
+                  >
+                    {t.projects.badgeErp}
+                  </motion.div>
+                )}
+              </div>
+
+              <DialogTitle className="text-3xl font-bold text-gradient pe-8">{title}</DialogTitle>
+
+              <p className="text-muted-foreground text-lg">{subtitle}</p>
             </div>
           </div>
         </DialogHeader>
 
-        <motion.div 
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.05 }}
+          className="relative -mx-6 mt-2 h-48 md:h-56 overflow-hidden rounded-none md:rounded-xl md:mx-0"
+        >
+          <img
+            src={project.image}
+            alt={title}
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-card/80 via-transparent to-transparent" />
+        </motion.div>
+
+        <motion.div
           className="space-y-6 mt-6"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
         >
           <div className="space-y-3">
-            <h3 className="text-xl font-semibold text-foreground">Overview</h3>
-            <p className="text-muted-foreground leading-relaxed">
-              {project.description}
-            </p>
+            <h3 className="text-xl font-semibold text-foreground">{t.projects.modal.overview}</h3>
+            <p className="text-muted-foreground leading-relaxed">{description}</p>
           </div>
 
           <div className="space-y-3">
             <h3 className="text-xl font-semibold text-foreground flex items-center gap-2">
               <span className="w-1 h-6 bg-gradient-to-b from-primary to-secondary rounded-full" />
-              Technologies
+              {t.projects.modal.technologies}
             </h3>
             <div className="flex flex-wrap gap-2">
               {project.technologies.map((tech, index) => (
@@ -73,10 +104,10 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
           <div className="space-y-3">
             <h3 className="text-xl font-semibold text-foreground flex items-center gap-2">
               <CheckCircle2 className="w-5 h-5 text-primary" />
-              Technical Details
+              {t.projects.modal.details}
             </h3>
             <ul className="space-y-2">
-              {project.details.map((detail, index) => (
+              {details.map((detail, index) => (
                 <motion.li
                   key={index}
                   initial={{ opacity: 0, x: -20 }}
@@ -91,14 +122,14 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
             </ul>
           </div>
 
-          {project.challenges.length > 0 && (
+          {challenges.length > 0 && (
             <div className="space-y-3">
               <h3 className="text-xl font-semibold text-foreground flex items-center gap-2">
                 <AlertCircle className="w-5 h-5 text-accent" />
-                Challenges & Solutions
+                {t.projects.modal.challenges}
               </h3>
               <ul className="space-y-3">
-                {project.challenges.map((challenge, index) => (
+                {challenges.map((challenge, index) => (
                   <motion.li
                     key={index}
                     initial={{ opacity: 0, x: -20 }}
@@ -116,10 +147,10 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
           <div className="space-y-3">
             <h3 className="text-xl font-semibold text-foreground flex items-center gap-2">
               <TrendingUp className="w-5 h-5 text-secondary" />
-              Results & Impact
+              {t.projects.modal.results}
             </h3>
             <ul className="space-y-2">
-              {project.results.map((result, index) => (
+              {results.map((result, index) => (
                 <motion.li
                   key={index}
                   initial={{ opacity: 0, x: -20 }}

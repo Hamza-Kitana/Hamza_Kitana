@@ -3,11 +3,15 @@ import SpotlightCard from './SpotlightCard';
 import { Badge } from './ui/badge';
 import { experiences } from '@/data/experience';
 import { Building2, MapPin, Calendar, CheckCircle2 } from 'lucide-react';
+import { useLanguage } from '@/i18n/LanguageContext';
+import { pick, pickList } from '@/lib/localized';
 
 export const Experience = () => {
+  const { locale, t } = useLanguage();
+
   return (
-    <section id="experience" className="py-20 px-4">
-      <div className="container mx-auto max-w-6xl">
+    <section id="experience" className="py-20 w-full">
+      <div className="section-full">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -15,16 +19,13 @@ export const Experience = () => {
           className="text-center mb-16 space-y-4"
         >
           <h2 className="text-4xl md:text-6xl font-bold">
-            <span className="text-gradient glow-text">Experience</span>
+            <span className="text-gradient glow-text">{t.experience.heading}</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Building innovative solutions across multiple industries
-          </p>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">{t.experience.subheading}</p>
         </motion.div>
 
         <div className="relative">
-          {/* Timeline line */}
-          <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-secondary to-accent transform -translate-x-1/2" />
+          <div className="hidden md:block absolute start-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-secondary to-accent transform -translate-x-1/2" />
 
           <div className="space-y-12">
             {experiences.map((exp, index) => (
@@ -34,43 +35,45 @@ export const Experience = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
-                className={`relative ${index % 2 === 0 ? 'md:pr-[50%] md:pl-0' : 'md:pl-[50%] md:pr-0'}`}
+                className={`relative ${index % 2 === 0 ? 'md:pe-[50%] md:ps-0' : 'md:ps-[50%] md:pe-0'}`}
               >
-                {/* Timeline dot */}
-                <div className="hidden md:block absolute left-1/2 top-8 w-4 h-4 bg-primary rounded-full transform -translate-x-1/2 shadow-[0_0_20px_hsl(var(--primary))] z-10" />
+                <div className="hidden md:block absolute start-1/2 top-8 w-4 h-4 bg-primary rounded-full transform -translate-x-1/2 shadow-[0_0_20px_hsl(var(--primary))] z-10" />
 
-                <SpotlightCard className="p-6 md:p-8 bg-card/50 backdrop-blur-sm border border-border hover:border-primary transition-all duration-500 relative overflow-hidden group" spotlightColor="rgba(0, 229, 255, 0.12)">
+                <SpotlightCard
+                  className="p-6 md:p-8 bg-card/50 backdrop-blur-sm border border-border hover:border-primary transition-all duration-500 relative overflow-hidden group"
+                  spotlightColor="rgba(0, 229, 255, 0.12)"
+                >
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  
+
                   <div className="relative space-y-4">
                     <div className="flex flex-wrap items-start justify-between gap-4">
                       <div className="space-y-2 flex-1">
                         <div className="flex items-center gap-2 flex-wrap">
                           <Building2 className="w-5 h-5 text-primary" />
-                          <h3 className="text-2xl font-bold text-gradient">{exp.company}</h3>
+                          <h3 className="text-2xl font-bold text-gradient">{pick(exp.company, locale)}</h3>
                           {exp.current && (
                             <Badge className="bg-primary/10 text-primary border-primary/30">
-                              Current
+                              {t.experience.current}
                             </Badge>
                           )}
                         </div>
-                        <p className="text-xl font-semibold text-foreground">{exp.position}</p>
+                        <p className="text-xl font-semibold text-foreground">{pick(exp.position, locale)}</p>
                       </div>
                     </div>
 
                     <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">
                       <div className="flex items-center gap-2">
                         <Calendar className="w-4 h-4 text-secondary" />
-                        <span>{exp.period}</span>
+                        <span>{pick(exp.period, locale)}</span>
                       </div>
                       <div className="flex items-center gap-2">
                         <MapPin className="w-4 h-4 text-accent" />
-                        <span>{exp.location}</span>
+                        <span>{pick(exp.location, locale)}</span>
                       </div>
                     </div>
 
                     <div className="pt-4 space-y-3">
-                      {exp.achievements.map((achievement, achievementIndex) => (
+                      {pickList(exp.achievements, locale).map((achievement, achievementIndex) => (
                         <motion.div
                           key={achievementIndex}
                           initial={{ opacity: 0, x: -20 }}

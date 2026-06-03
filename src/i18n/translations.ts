@@ -1,0 +1,227 @@
+﻿import type { Locale } from '@/lib/localized';
+
+export type TranslationKeys = typeof en;
+
+const en = {
+  nav: {
+    home: 'Home',
+    about: 'About',
+    skills: 'Skills',
+    experience: 'Experience',
+    projects: 'Projects',
+    contact: 'Contact',
+  },
+  hero: {
+    name: 'Hamza Kitana',
+    role: 'Software Engineering',
+    title: 'Full Stack Developer & Marketing Manager',
+    bio: 'Specialized in C# .NET, React.js, Android Studio, and creating innovative solutions for ERP, CRM, and E-commerce systems. Based in Dubai, UAE.',
+    lecturer: 'Lecturer & Mentor',
+    available: 'Available',
+    lecturerDesc:
+      'I deliver programming lectures and life development workshops. Teaching coding skills, career building, personal growth, and creating effective life plans.',
+    programming: 'Programming',
+    lifeDev: 'Life Development',
+    downloadCv: 'Download CV',
+    viewProjects: 'View Projects',
+    contactMe: 'Contact Me',
+    online: 'Online',
+  },
+  about: {
+    heading: 'About Me',
+    subheading:
+      'Results-driven Full Stack Web Developer & Marketing Manager with extensive experience in building scalable enterprise solutions',
+    summaryTitle: 'Professional Summary',
+    summary1:
+      'Extensive experience in C# .NET, React.js, Android Studio, specializing in ERP, CRM, Payroll, Finance, and Retail systems. Skilled in end-to-end project management, from requirement gathering and documentation to development, testing, and delivery.',
+    summary2:
+      'Proven track record in designing e-commerce and corporate websites, implementing automation workflows, integrating AI voice systems, and executing marketing campaigns that increase user engagement.',
+    summary3:
+      'Strong problem-solving skills with a history of resolving critical system issues, optimizing databases, and improving operational efficiency. Adept at collaborating with clients and cross-functional teams to deliver projects on time and to specification.',
+    summary4:
+      'Experienced lecturer and mentor, delivering programming lectures and life development workshops. Passionate about teaching coding skills, helping others build their careers correctly, identifying what\'s missing in their journey, and creating effective life plans. Committed to sharing knowledge and empowering the next generation of developers.',
+    highlights: {
+      fullStack: { title: 'Full Stack Expert', desc: 'C# .NET, React.js, Android Studio' },
+      enterprise: { title: 'Enterprise Solutions', desc: 'ERP, CRM, Payroll, Finance Systems' },
+      marketing: { title: 'Marketing Manager', desc: 'Digital campaigns & automation' },
+      leadership: { title: 'Project Leadership', desc: 'End-to-end delivery excellence' },
+      lecturer: { title: 'Lecturer & Mentor', desc: 'Programming lectures & life development' },
+    },
+  },
+  skills: {
+    heading: 'Skills & Expertise',
+    subheading: 'A comprehensive toolkit for building exceptional solutions',
+    softSkills: 'Soft Skills',
+    categories: {
+      programming: 'Programming & Web Development',
+      database: 'Database Management',
+      enterprise: 'Enterprise Systems',
+      testing: 'Testing & QA',
+      marketing: 'Marketing & Digital Tools',
+      ecommerce: 'E-commerce Development',
+      devops: 'DevOps & Deployment',
+    },
+  },
+  experience: {
+    heading: 'Experience',
+    subheading: 'Building innovative solutions across multiple industries',
+    current: 'Current',
+  },
+  projects: {
+    heading: 'Featured Projects',
+    subheading:
+      'Explore my portfolio of innovative solutions across web development, AI integration, and enterprise systems',
+    sectionFeatured: 'Featured Projects',
+    sectionErp: 'Enterprise ERP Suite',
+    sectionErpSubtitle:
+      'Complete, integrated business modules — Accounting, CRM, HR, Payroll & Retail built for professional operations',
+    erpSuiteBadge: 'Flagship Systems',
+    erpModules: 'integrated modules',
+    sectionMore: 'More Projects',
+    statsTotal: 'Total Projects',
+    statsErp: 'ERP Systems',
+    statsMore: 'More Projects',
+    viewDetails: 'View Details',
+    moreTech: 'more',
+    badgeFeatured: 'Featured',
+    badgeErp: 'ERP',
+    modal: {
+      overview: 'Overview',
+      technologies: 'Technologies',
+      details: 'Technical Details',
+      challenges: 'Challenges & Solutions',
+      results: 'Results & Impact',
+    },
+  },
+  contact: {
+    heading: "Let's Build Something Amazing",
+    subheading: 'Available for freelance projects and full-time opportunities',
+    getInTouch: 'Get In Touch',
+    location: 'Based in Dubai, UAE • Available Worldwide',
+  },
+  footer: {
+    rightsSuffix: 'All rights reserved.',
+  },
+  language: {
+    switchTo: 'العربية',
+    label: 'Language',
+  },
+  notFound: {
+    title: '404',
+    message: 'Oops! Page not found',
+    home: 'Return to Home',
+  },
+};
+
+const ar: TranslationKeys = {
+  nav: {
+    home: 'الرئيسية',
+    about: 'عني',
+    skills: 'المهارات',
+    experience: 'الخبرات',
+    projects: 'المشاريع',
+    contact: 'تواصل',
+  },
+  hero: {
+    name: 'حمزة كيتана',
+    role: 'هندسة البرمجيات',
+    title: 'مطور Full Stack ومدير تسويق',
+    bio: 'متخصص في C# .NET و React.js و Android Studio، وبناء حلول مبتكرة لأنظمة ERP و CRM والتجارة الإلكترونية. مقيم في دبي، الإمارات.',
+    lecturer: 'محاضر ومرشد',
+    available: 'متاح',
+    lecturerDesc:
+      'أقدّم محاضرات برمجة وورش تطوير ذاتي. أعلّم مهارات البرمجة، بناء المسار المهني، النمو الشخصي، ووضع خطط حياتية فعّالة.',
+    programming: 'البرمجة',
+    lifeDev: 'التطوير الذاتي',
+    downloadCv: 'تحميل السيرة الذاتية',
+    viewProjects: 'عرض المشاريع',
+    contactMe: 'تواصل معي',
+    online: 'متصل',
+  },
+  about: {
+    heading: 'عني',
+    subheading:
+      'مطور Full Stack ومدير تسويق يركّز على النتائج، بخبرة واسعة في بناء حلول مؤسسية قابلة للتوسع',
+    summaryTitle: 'ملخص مهني',
+    summary1:
+      'خبرة واسعة في C# .NET و React.js و Android Studio، متخصص في أنظمة ERP و CRM و Payroll والمالية والتجزئة. أعمل على إدارة المشاريع من جمع المتطلبات والتوثيق إلى التطوير والاختبار والتسليم.',
+    summary2:
+      'سجلّ حافل في تصميم مواقع التجارة الإلكترونية والشركات، أتمتة سير العمل، دمج أنظمة الصوت بالذكاء الاصطناعي، وتنفيذ حملات تسويقية ترفع التفاعل.',
+    summary3:
+      'مهارات قوية في حل المشكلات، إصلاح الأعطال الحرجة، تحسين قواعد البيانات، ورفع كفاءة العمليات. أتعاون مع العملاء والفرق متعددة التخصصات لتسليم المشاريع في الوقت المحدد.',
+    summary4:
+      'محاضر ومرشد، أقدّم محاضرات برمجة وورش تطوير ذاتي. شغوف بتعليم البرمجة، مساعدة الآخرين على بناء مسيرتهم المهنية، وتحديد ما ينقصهم، ووضع خطط حياتية فعّالة.',
+    highlights: {
+      fullStack: { title: 'خبير Full Stack', desc: 'C# .NET, React.js, Android Studio' },
+      enterprise: { title: 'حلول مؤسسية', desc: 'ERP, CRM, Payroll, Finance Systems' },
+      marketing: { title: 'مدير تسويق', desc: 'حملات رقمية وأتمتة' },
+      leadership: { title: 'قيادة المشاريع', desc: 'تسليم شامل بجودة عالية' },
+      lecturer: { title: 'محاضر ومرشد', desc: 'محاضرات برمجة وتطوير ذاتي' },
+    },
+  },
+  skills: {
+    heading: 'المهارات والخبرات',
+    subheading: 'مجموعة أدوات شاملة لبناء حلول استثنائية',
+    softSkills: 'المهارات الشخصية',
+    categories: {
+      programming: 'البرمجة وتطوير الويب',
+      database: 'إدارة قواعد البيانات',
+      enterprise: 'الأنظمة المؤسسية',
+      testing: 'الاختبار وضمان الجودة',
+      marketing: 'التسويق والأدوات الرقمية',
+      ecommerce: 'تطوير التجارة الإلكترونية',
+      devops: 'DevOps والنشر',
+    },
+  },
+  experience: {
+    heading: 'الخبرات',
+    subheading: 'بناء حلول مبتكرة عبر قطاعات متعددة',
+    current: 'حالي',
+  },
+  projects: {
+    heading: 'المشاريع المميزة',
+    subheading:
+      'استكشف محفظة مشاريعي في تطوير الويب، دمج الذكاء الاصطناعي، والأنظمة المؤسسية',
+    sectionFeatured: 'المشاريع المميزة',
+    sectionErp: 'أنظمة ERP المميزة',
+    sectionErpSubtitle:
+      'وحدات أعمال متكاملة — Accounting, CRM, HR, Payroll & Retail مصممة لعمليات احترافية',
+    erpSuiteBadge: 'أنظمة رئيسية',
+    erpModules: 'وحدات متكاملة',
+    sectionMore: 'More Projects',
+    statsTotal: 'إجمالي المشاريع',
+    statsErp: 'أنظمة ERP',
+    statsMore: 'More Projects',
+    viewDetails: 'عرض التفاصيل',
+    moreTech: 'أخرى',
+    badgeFeatured: 'مميز',
+    badgeErp: 'ERP',
+    modal: {
+      overview: 'نظرة عامة',
+      technologies: 'التقنيات',
+      details: 'التفاصيل التقنية',
+      challenges: 'التحديات والحلول',
+      results: 'النتائج والأثر',
+    },
+  },
+  contact: {
+    heading: 'لنبني شيئاً مميزاً',
+    subheading: 'متاح لمشاريع Freelance وفرص العمل بدوام كامل',
+    getInTouch: 'تواصل معي',
+    location: 'مقيم في دبي، الإمارات • متاح عالمياً',
+  },
+  footer: {
+    rightsSuffix: 'جميع الحقوق محفوظة.',
+  },
+  language: {
+    switchTo: 'English',
+    label: 'اللغة',
+  },
+  notFound: {
+    title: '404',
+    message: 'عذراً! الصفحة غير موجودة',
+    home: 'العودة للرئيسية',
+  },
+};
+
+export const translations: Record<Locale, TranslationKeys> = { en, ar };

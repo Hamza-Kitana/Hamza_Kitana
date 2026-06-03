@@ -1,45 +1,56 @@
+import { loc, type LocalizedString } from '@/lib/localized';
+
+export type SkillCategoryKey =
+  | 'programming'
+  | 'database'
+  | 'enterprise'
+  | 'testing'
+  | 'marketing'
+  | 'ecommerce'
+  | 'devops';
+
 export interface Skill {
-  category: string;
+  key: SkillCategoryKey;
   items: string[];
 }
 
-export const softSkills: string[] = [
-  "Problem Solving",
-  "Client Communication",
-  "Project Leadership",
-  "Team Collaboration",
-  "Time Management",
-  "Adaptability",
-  "Attention to Detail"
+export const softSkills: LocalizedString[] = [
+  loc('Problem Solving', 'حل المشكلات'),
+  loc('Client Communication', 'التواصل مع العملاء'),
+  loc('Project Leadership', 'قيادة المشاريع'),
+  loc('Team Collaboration', 'العمل الجماعي'),
+  loc('Time Management', 'إدارة الوقت'),
+  loc('Adaptability', 'المرونة'),
+  loc('Attention to Detail', 'الدقة في التفاصيل'),
 ];
 
 export const hardSkills: Skill[] = [
   {
-    category: "Programming & Web Development",
-    items: ["C# .NET", "MVC", "React.js", "Android Studio", "JavaScript", "TypeScript"]
+    key: 'programming',
+    items: ['C# .NET', 'MVC', 'React.js', 'Android Studio', 'JavaScript', 'TypeScript'],
   },
   {
-    category: "Database Management",
-    items: ["SQL Plus", "PostgreSQL", "SQLite", "Database Optimization", "Query Performance"]
+    key: 'database',
+    items: ['SQL Plus', 'PostgreSQL', 'SQLite', 'Database Optimization', 'Query Performance'],
   },
   {
-    category: "Enterprise Systems",
-    items: ["ERP", "CRM", "Payroll", "Finance Systems", "Retail Systems"]
+    key: 'enterprise',
+    items: ['ERP', 'CRM', 'Payroll', 'Finance Systems', 'Retail Systems'],
   },
   {
-    category: "Testing & QA",
-    items: ["Functional Testing", "Integration Testing", "Black-box Testing"]
+    key: 'testing',
+    items: ['Functional Testing', 'Integration Testing', 'Black-box Testing'],
   },
   {
-    category: "Marketing & Digital Tools",
-    items: ["Social Media Campaigns", "Content Creation", "Marketing Automation (n8n)", "AI Voice Integration"]
+    key: 'marketing',
+    items: ['Social Media Campaigns', 'Content Creation', 'Marketing Automation (n8n)', 'AI Voice Integration'],
   },
   {
-    category: "E-commerce Development",
-    items: ["Payment Gateway Integration", "Amazon Product API", "Full-stack E-commerce"]
+    key: 'ecommerce',
+    items: ['Payment Gateway Integration', 'Amazon Product API', 'Full-stack E-commerce'],
   },
   {
-    category: "DevOps & Deployment",
-    items: ["VPS Management", "Nginx", "SSL Configuration", "Domain Management"]
-  }
+    key: 'devops',
+    items: ['VPS Management', 'Nginx', 'SSL Configuration', 'Domain Management'],
+  },
 ];
