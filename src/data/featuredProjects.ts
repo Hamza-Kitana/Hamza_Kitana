@@ -171,56 +171,6 @@ export const featuredProjects: Project[] = [
     ),
   },
   {
-    id: 25,
-    category: 'featured',
-    title: loc('Bioskin Pharmaceutical E-Commerce', 'متجر Bioskin للأدوية'),
-    subtitle: loc('Full E-Commerce • Professional Admin Dashboard', 'تجارة إلكترونية كاملة • لوحة إدارة احترافية'),
-    description: loc(
-      'A complete e-commerce platform for Bioskin pharmaceutical company with a professional admin dashboard, product management, orders, and full business operations control.',
-      'منصة تجارة إلكترونية متكاملة لشركة Bioskin للأدوية مع لوحة إدارة احترافية، إدارة منتجات وطلبات، وتحكم كامل بعمليات الشركة.'
-    ),
-    technologies: ['React', 'C# .NET', 'SQL Server', 'E-Commerce', 'Admin Dashboard'],
-    image: '/projects/project-bioskin.jpg',
-    details: locList(
-      [
-        'Customer-facing store with categories, search, cart, and checkout',
-        'Professional admin dashboard for products, orders, and customers',
-        'Pharmaceutical product catalog with structured data management',
-        'Order tracking and status workflow for staff',
-        'Secure authentication and role-based admin access',
-      ],
-      [
-        'متجر للعملاء مع تصنيفات وبحث وسلة ودفع',
-        'لوحة إدارة احترافية للمنتجات والطلبات والعملاء',
-        'كتalog منتجات دوائية مع إدارة بيانات منظمة',
-        'تتبع الطلبات وسير حالة للموظفين',
-        'مصادقة آمنة وصلاحيات إدارية حسب الرول',
-      ]
-    ),
-    challenges: locList(
-      [
-        'Building a dashboard that scales with growing product and order volume',
-        'Solution: Paginated APIs, filtered views, and modular admin sections',
-      ],
-      [
-        'بناء لوحة إدارة تتوسع مع نمو المنتجات والطلبات',
-        'الحل: APIs مع Pagination، عروض مفلترة، وأقسام إدارية modular',
-      ]
-    ),
-    results: locList(
-      [
-        'Full online presence for Bioskin pharmaceutical products',
-        'Efficient order and catalog management for the team',
-        'Professional, trustworthy shopping experience for customers',
-      ],
-      [
-        'حضور رقمي كامل لمنتجات Bioskin الدوائية',
-        'إدارة فعّالة للطلبات والكتalog للفريق',
-        'تجربة تسوق احترافية وموثوقة للعملاء',
-      ]
-    ),
-  },
-  {
     id: 26,
     category: 'featured',
     title: loc('Premium Car Dealership Website', 'موقع تعريفي لشركة سيارات'),
