@@ -32,7 +32,7 @@ export const Hero = ({ onViewProjects }: { onViewProjects?: () => void }) => {
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="space-y-6"
+            className="space-y-6 md:ms-8 lg:ms-12 xl:ms-16 rtl:md:ms-0 rtl:md:me-8 rtl:lg:me-12 rtl:xl:me-16"
           >
             <motion.h1
               className="text-4xl sm:text-5xl md:text-7xl font-bold"
@@ -167,7 +167,7 @@ export const Hero = ({ onViewProjects }: { onViewProjects?: () => void }) => {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="relative"
           >
-            <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md mx-auto">
+            <div className="relative w-full max-w-[22rem] sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl mx-auto">
               <ProfileCard
                 className="pc-details-bottom"
                 name={PROFILE_NAME}
