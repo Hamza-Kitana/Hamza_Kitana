@@ -25,17 +25,24 @@ export const Hero = ({ onViewProjects }: { onViewProjects?: () => void }) => {
   ];
 
   return (
-    <section className="min-h-screen flex items-center justify-center py-8 relative w-full">
-      <div className="section-full">
-        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+    <section className="h-svh flex items-center justify-center py-3 sm:py-4 md:py-6 relative w-full overflow-hidden">
+      <div className="section-full h-full flex items-center">
+        <div className="grid md:grid-cols-2 gap-4 md:gap-8 lg:gap-10 items-center w-full">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="space-y-6 md:ms-8 lg:ms-12 xl:ms-16 rtl:md:ms-0 rtl:md:me-8 rtl:lg:me-12 rtl:xl:me-16"
+            className="space-y-3 sm:space-y-4 md:space-y-5 md:ms-8 lg:ms-12 xl:ms-16 rtl:md:ms-0 rtl:md:me-8 rtl:lg:me-12 rtl:xl:me-16"
           >
+            <div className="md:hidden flex justify-start">
+              <img
+                src={profileImage}
+                alt={PROFILE_NAME}
+                className="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl object-cover object-top border border-primary/30 shadow-[0_0_24px_hsl(var(--primary)/0.25)]"
+              />
+            </div>
             <motion.h1
-              className="text-4xl sm:text-5xl md:text-7xl font-bold"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
@@ -44,7 +51,7 @@ export const Hero = ({ onViewProjects }: { onViewProjects?: () => void }) => {
             </motion.h1>
 
             <motion.p
-              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-secondary glow-text inline-block leading-tight py-2"
+              className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-secondary glow-text inline-block leading-tight"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
@@ -53,7 +60,7 @@ export const Hero = ({ onViewProjects }: { onViewProjects?: () => void }) => {
             </motion.p>
 
             <motion.p
-              className="text-lg sm:text-xl md:text-2xl text-muted-foreground"
+              className="text-base sm:text-lg md:text-xl text-muted-foreground"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
@@ -62,7 +69,7 @@ export const Hero = ({ onViewProjects }: { onViewProjects?: () => void }) => {
             </motion.p>
 
             <motion.p
-              className="text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed"
+              className="text-sm md:text-base text-muted-foreground leading-relaxed line-clamp-3"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7 }}
@@ -74,31 +81,30 @@ export const Hero = ({ onViewProjects }: { onViewProjects?: () => void }) => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8 }}
-              className="mt-6"
             >
-              <Card className="p-4 sm:p-5 bg-gradient-to-r from-primary/10 via-secondary/10 to-primary/10 border-primary/20 backdrop-blur-sm hover:border-primary/40 transition-all duration-300">
-                <div className="flex items-start gap-4">
-                  <div className="p-2 sm:p-3 rounded-xl bg-gradient-to-br from-primary/20 to-secondary/20 text-primary flex-shrink-0">
-                    <GraduationCap className="w-5 h-5 sm:w-6 sm:h-6" />
+              <Card className="p-3 sm:p-4 bg-gradient-to-r from-primary/10 via-secondary/10 to-primary/10 border-primary/20 backdrop-blur-sm hover:border-primary/40 transition-all duration-300">
+                <div className="flex items-start gap-3">
+                  <div className="p-2 rounded-xl bg-gradient-to-br from-primary/20 to-secondary/20 text-primary flex-shrink-0">
+                    <GraduationCap className="w-5 h-5" />
                   </div>
-                  <div className="flex-1 space-y-2">
+                  <div className="flex-1 space-y-1.5 min-w-0">
                     <div className="flex items-center gap-2 flex-wrap">
-                      <h3 className="text-base sm:text-lg font-semibold text-foreground">
+                      <h3 className="text-sm sm:text-base font-semibold text-foreground">
                         {t.hero.lecturer}
                       </h3>
-                      <span className="px-2 py-1 text-xs rounded-full bg-primary/20 text-primary font-medium">
+                      <span className="px-2 py-0.5 text-[10px] sm:text-xs rounded-full bg-primary/20 text-primary font-medium">
                         {t.hero.available}
                       </span>
                     </div>
-                    <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
+                    <p className="hidden md:block text-sm text-muted-foreground leading-relaxed line-clamp-2">
                       {t.hero.lecturerDesc}
                     </p>
-                    <div className="flex flex-wrap gap-3 pt-2">
-                      <div className="flex items-center gap-2 text-xs sm:text-sm text-muted-foreground">
+                    <div className="flex flex-wrap gap-3">
+                      <div className="flex items-center gap-2 text-xs text-muted-foreground">
                         <BookOpen className="w-4 h-4 text-primary" />
                         <span>{t.hero.programming}</span>
                       </div>
-                      <div className="flex items-center gap-2 text-xs sm:text-sm text-muted-foreground">
+                      <div className="flex items-center gap-2 text-xs text-muted-foreground">
                         <Users className="w-4 h-4 text-primary" />
                         <span>{t.hero.lifeDev}</span>
                       </div>
@@ -109,7 +115,7 @@ export const Hero = ({ onViewProjects }: { onViewProjects?: () => void }) => {
             </motion.div>
 
             <motion.div
-              className="flex flex-wrap gap-3 sm:gap-4"
+              className="flex flex-wrap gap-2.5 sm:gap-3"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.9 }}
@@ -120,13 +126,13 @@ export const Hero = ({ onViewProjects }: { onViewProjects?: () => void }) => {
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 sm:p-3 rounded-xl bg-card border border-border hover:border-primary transition-all duration-300 hover:shadow-[0_0_20px_hsl(var(--primary)/0.3)]"
+                  className="p-2 sm:p-2.5 rounded-xl bg-card border border-border hover:border-primary transition-all duration-300 hover:shadow-[0_0_20px_hsl(var(--primary)/0.3)]"
                   whileHover={{ scale: 1.1, rotate: 5 }}
                   initial={{ opacity: 0, scale: 0 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 0.9 + index * 0.1 }}
                 >
-                  <social.icon className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
+                  <social.icon className="w-5 h-5 text-primary" />
                 </motion.a>
               ))}
             </motion.div>
@@ -135,11 +141,11 @@ export const Hero = ({ onViewProjects }: { onViewProjects?: () => void }) => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.1 }}
-              className="flex flex-col sm:flex-row gap-3"
+              className="flex flex-row gap-3"
             >
               <Button
                 size="lg"
-                className="w-full sm:w-auto bg-gradient-to-r from-primary to-secondary hover:opacity-90 text-primary-foreground"
+                className="flex-1 sm:flex-none bg-gradient-to-r from-primary to-secondary hover:opacity-90 text-primary-foreground"
                 asChild
               >
                 <a href="/Hamza.pdf" download>
@@ -151,7 +157,7 @@ export const Hero = ({ onViewProjects }: { onViewProjects?: () => void }) => {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="w-full sm:w-auto border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all"
+                  className="flex-1 sm:flex-none border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all"
                   onClick={onViewProjects}
                 >
                   <FolderOpen className="me-2 h-5 w-5" />
@@ -165,9 +171,9 @@ export const Hero = ({ onViewProjects }: { onViewProjects?: () => void }) => {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="relative"
+            className="relative hidden md:block"
           >
-            <div className="relative w-full max-w-[22rem] sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl mx-auto">
+            <div className="hero-profile relative w-full max-w-sm lg:max-w-md xl:max-w-lg mx-auto">
               <ProfileCard
                 className="pc-details-bottom"
                 name={PROFILE_NAME}

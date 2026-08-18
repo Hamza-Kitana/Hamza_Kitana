@@ -11,6 +11,7 @@ import { ProjectModal } from '@/components/ProjectModal';
 import { FloatingNav } from '@/components/FloatingNav';
 import { LanguageToggle } from '@/components/LanguageToggle';
 import { ProjectsStats } from '@/components/ProjectsStats';
+import { Contact } from '@/components/Contact';
 import { projects } from '@/data/projects';
 import type { Project } from '@/data/projects';
 import { useLanguage } from '@/i18n/LanguageContext';
@@ -40,7 +41,7 @@ const Index = () => {
   );
 
   return (
-    <div className="min-h-screen relative">
+    <div className={`${activeSection === 'home' ? 'h-svh overflow-hidden' : 'min-h-screen'} relative`}>
       <AnimatedBackground />
       <LanguageToggle />
       <FloatingNav onSectionChange={setActiveSection} activeSection={activeSection} />
@@ -125,51 +126,8 @@ const Index = () => {
             )}
 
             {activeSection === 'contact' && (
-              <section id="contact" className="py-20 px-4 border-t border-border">
-                <div className="container mx-auto max-w-4xl text-center space-y-8">
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    className="space-y-4"
-                  >
-                    <h2 className="text-3xl md:text-5xl font-bold text-gradient glow-text">
-                      {t.contact.heading}
-                    </h2>
-                    <p className="text-xl text-muted-foreground">{t.contact.subheading}</p>
-                  </motion.div>
-
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.2 }}
-                    className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-                  >
-                    <a
-                      href="mailto:hamzanael@hotmail.com"
-                      className="px-8 py-4 rounded-xl bg-gradient-to-r from-primary to-secondary text-primary-foreground font-semibold hover:opacity-90 transition-opacity"
-                    >
-                      {t.contact.getInTouch}
-                    </a>
-                    <a
-                      href="tel:+971588822401"
-                      className="px-8 py-4 rounded-xl border-2 border-primary text-primary font-semibold hover:bg-primary hover:text-primary-foreground transition-all"
-                    >
-                      +971 588 822 401
-                    </a>
-                  </motion.div>
-
-                  <motion.p
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.4 }}
-                    className="text-muted-foreground"
-                  >
-                    {t.contact.location}
-                  </motion.p>
-                </div>
+              <section id="contact">
+                <Contact />
               </section>
             )}
           </motion.div>
@@ -178,13 +136,15 @@ const Index = () => {
 
       <ProjectModal project={selectedProject} onClose={() => setSelectedProject(null)} />
 
-      <footer className="border-t border-border py-8 px-4">
-        <div className="container mx-auto max-w-7xl text-center text-muted-foreground">
-          <p>
-            © 2025 {PROFILE_NAME}. {t.footer.rightsSuffix}
-          </p>
-        </div>
-      </footer>
+      {activeSection !== 'home' && (
+        <footer className="border-t border-border py-8 px-4">
+          <div className="container mx-auto max-w-7xl text-center text-muted-foreground">
+            <p>
+              © 2025 {PROFILE_NAME}. {t.footer.rightsSuffix}
+            </p>
+          </div>
+        </footer>
+      )}
     </div>
   );
 };

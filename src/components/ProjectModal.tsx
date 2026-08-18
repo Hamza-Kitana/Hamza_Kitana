@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { CheckCircle2, AlertCircle, TrendingUp } from 'lucide-react';
+import { CheckCircle2, AlertCircle, TrendingUp, ExternalLink, KeyRound } from 'lucide-react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from './ui/dialog';
 import type { Project } from '@/data/projects';
 import { pick, pickList } from '@/lib/localized';
@@ -47,6 +47,16 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
                     {t.projects.badgeErp}
                   </motion.div>
                 )}
+                {project.liveUrl && (
+                  <motion.div
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    className="inline-flex items-center gap-1.5 px-4 py-1 rounded-full bg-emerald-500/15 text-emerald-300 text-sm font-semibold border border-emerald-400/30"
+                  >
+                    <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                    {t.projects.badgeLive}
+                  </motion.div>
+                )}
               </div>
 
               <DialogTitle className="text-xl sm:text-3xl font-bold text-gradient pe-8 leading-tight">{title}</DialogTitle>
@@ -68,7 +78,43 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-card/80 via-transparent to-transparent" />
+          {project.liveUrl && (
+            <a
+              href={project.liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="absolute bottom-3 end-3 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary text-primary-foreground text-xs sm:text-sm font-semibold shadow-lg hover:opacity-90 transition-opacity"
+            >
+              <ExternalLink className="w-3.5 h-3.5" />
+              {t.projects.visitLive}
+            </a>
+          )}
         </motion.div>
+
+        {project.liveUrl && (
+          <a
+            href={project.liveUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-4 flex items-center justify-between gap-3 rounded-xl border border-primary/30 bg-gradient-to-r from-primary/15 to-secondary/10 px-4 py-3 hover:border-primary/60 transition-colors"
+          >
+            <div className="min-w-0">
+              <p className="text-sm font-semibold text-foreground">{t.projects.visitLive}</p>
+              <p className="text-xs text-muted-foreground truncate">{project.liveUrl.replace(/^https?:\/\//, '')}</p>
+            </div>
+            <ExternalLink className="w-4 h-4 shrink-0 text-primary" />
+          </a>
+        )}
+
+        {project.demoHint && (
+          <div className="mt-3 flex items-start gap-3 rounded-xl border border-emerald-400/25 bg-emerald-500/10 px-4 py-3">
+            <KeyRound className="w-4 h-4 shrink-0 text-emerald-300 mt-0.5" />
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-wider text-emerald-300">{t.projects.demoAccess}</p>
+              <p className="text-sm text-foreground mt-0.5">{pick(project.demoHint, locale)}</p>
+            </div>
+          </div>
+        )}
 
         <motion.div
           className="space-y-4 sm:space-y-6 mt-4 sm:mt-6"
@@ -80,6 +126,33 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
             <h3 className="text-base sm:text-xl font-semibold text-foreground">{t.projects.modal.overview}</h3>
             <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">{description}</p>
           </div>
+
+          {project.meaning && (
+            <div className="rounded-xl border border-primary/20 bg-primary/5 p-4 space-y-2">
+              <p className="text-xs uppercase tracking-wider text-primary font-semibold">
+                {project.acronym ? `${project.acronym} — ${t.projects.modal.meaning}` : t.projects.modal.meaning}
+              </p>
+              <p className="text-sm sm:text-base text-foreground/90 leading-relaxed">
+                {pick(project.meaning, locale)}
+              </p>
+            </div>
+          )}
+
+          {project.videoId && (
+            <div className="space-y-3">
+              <h3 className="text-base sm:text-xl font-semibold text-foreground">{t.projects.modal.video}</h3>
+              <div className="relative overflow-hidden rounded-xl border border-border/70 bg-black aspect-video">
+                <iframe
+                  src={`https://www.youtube-nocookie.com/embed/${project.videoId}`}
+                  title={`${title} intro`}
+                  className="absolute inset-0 h-full w-full"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          )}
 
           <div className="space-y-3">
             <h3 className="text-xl font-semibold text-foreground flex items-center gap-2">

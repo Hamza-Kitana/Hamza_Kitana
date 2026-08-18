@@ -13,9 +13,537 @@ export interface Project {
   challenges: LocalizedList;
   results: LocalizedList;
   image: string;
+  liveUrl?: string;
+  demoHint?: LocalizedString;
+  acronym?: string;
+  fullName?: LocalizedString;
+  meaning?: LocalizedString;
+  videoId?: string;
 }
 
 export const featuredProjects: Project[] = [
+  {
+    id: 45,
+    category: 'featured',
+    liveUrl: 'https://royal-care-eta.vercel.app/',
+    title: loc('Royal Care — Premium Maid Booking', 'Royal Care — طلب خادمات بتجربة فاخرة'),
+    subtitle: loc('Domestic Staff On Demand • Elegant Booking • Trusted Care', 'عمالة منزلية حسب الطلب • حجز أنيق • رعاية موثوقة'),
+    description: loc(
+      'A premium website for booking domestic workers and maids — Royal Care. Families request live-in or part-time help through a polished, high-end flow: browse services, choose the right profile, and book with a calm, professional experience instead of messy WhatsApp chats.',
+      'موقع فاخر لطلب الخادمات والعمالة المنزلية — Royal Care. العائلات تطلب مساعدة مقيمة أو جزئية بمسار أنيق واحترافي: تصفح الخدمات، اختيار الملف المناسب، والحجز بتجربة هادئة بدل فوضى الواتساب.'
+    ),
+    technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Booking Flow'],
+    image: '/projects/project-royalcare.jpg',
+    details: locList(
+      [
+        'Premium brand site for domestic and household staffing',
+        'Clear request flow to book a maid without phone-tag chaos',
+        'Service presentation built for trust: care, professionalism, and privacy',
+        'High-end visual identity — gold-tone luxury, not a classified ads page',
+        'Contact and booking CTAs designed for conversions on mobile and desktop',
+      ],
+      [
+        'موقع هوية فاخر لخدمات الخادمات والعمالة المنزلية',
+        'مسار طلب واضح لحجز خادمة بدون شد وجذب على الهاتف',
+        'عرض خدمات مبني على الثقة: رعاية، احتراف، وخصوصية',
+        'هوية بصرية راقية — لمسة فخمة، وليست صفحة إعلانات',
+        'أزرار تواصل وحجز مصممة للتحويل على الموبايل والديسكتوب',
+      ]
+    ),
+    challenges: locList(
+      [
+        'Selling a sensitive service (home staff) with dignity and luxury, not cheap classifieds',
+        'Solution: A premium care brand, restrained motion, and a booking path that feels private and official',
+      ],
+      [
+        'بيع خدمة حساسة (عمالة منزلية) بكرامة وفخامة، وليس كإعلان رخيص',
+        'الحل: علامة رعاية فاخرة، حركة محسوبة، ومسار حجز يبدو خاصاً ورسمياً',
+      ]
+    ),
+    results: locList(
+      [
+        'Live booking site at royal-care-eta.vercel.app',
+        'Families can request staff in a few calm steps',
+        'A distinctive luxury identity for a domestic-services business',
+      ],
+      [
+        'موقع حجز لايف على royal-care-eta.vercel.app',
+        'العائلات تطلب العمالة المنزلية بخطوات هادئة وواضحة',
+        'هوية فاخرة مميزة لأعمال الخدمات المنزلية',
+      ]
+    ),
+  },
+  {
+    id: 44,
+    category: 'featured',
+    liveUrl: 'https://maoon-green.vercel.app/',
+    title: loc("Ma'oun Al-Khair — National Donations Portal", 'معوان الخير — منصة التبرعات الرسمية'),
+    subtitle: loc('Trusted Giving • 10 Aid Categories • Full Transparency', 'عطاء موثوق • 10 أقسام إنسانية • شفافية كاملة'),
+    description: loc(
+      "A professional national donations platform for Ma'oun Al-Khair. It connects donors with verified cases — debtors, struggling families, students, patients, and disaster victims — with transparent tracking, secure payments, and a calm, high-end Arabic experience.",
+      'منصة تبرعات رسمية واحترافية لمعوان الخير. تربط المتبرعين بحالات موثّقة — غارمين، أسر متعففة، طلبة، مرضى، ومتضرري كوارث — مع تتبع شفاف، دفع آمن، وتجربة عربية أنيقة وعالية المستوى.'
+    ),
+    technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Payments', 'i18n'],
+    image: '/projects/project-maoon.jpg',
+    details: locList(
+      [
+        'Cinematic Arabic landing page with live donation and cases counters',
+        'Ten humanitarian categories: debtors, rent, student fees, water, electricity, elderly, disability, medical care, and disaster relief',
+        'Donate now or request help — two clear paths without friction',
+        'Trust layer: full transparency, committee review, and beneficiary dignity/privacy',
+        'Secure encrypted checkout so donors can give without complicated signup',
+        'About, supported sections, contact, and login for a complete official portal',
+      ],
+      [
+        'صفحة رئيسية عربية سينمائية مع عدادات للتبرعات والحالات',
+        'عشرة أقسام إنسانية: غارمون، إيجار، رسوم طلبة، مياه، كهرباء، كبار سن، ذوو إعاقة، علاج، وإغاثة كوارث',
+        'مساران واضحان: تبرع الآن أو اطلب مساعدة — بدون تعقيد',
+        'طبقة ثقة: شفافية كاملة، تدقيق لجنة، وكرامة وخصوصية للمستفيد',
+        'دفع آمن ومشفّر حتى المتبرع يعطي بدون تسجيل معقّد',
+        'صفحات من نحن، الأقسام، التواصل، وتسجيل الدخول كبوابة رسمية كاملة',
+      ]
+    ),
+    challenges: locList(
+      [
+        'Making a donations site feel official and warm — never like a generic charity template',
+        'Solution: Government-grade visual language, clear aid categories, and a dignity-first content tone',
+      ],
+      [
+        'جعل موقع التبرعات يبدو رسمياً ودافئاً — وليس قالباً خيرياً عاماً',
+        'الحل: لغة بصرية بمستوى جهة رسمية، أقسام عطاء واضحة، ونبرة محتوى تحفظ كرامة المستفيد',
+      ]
+    ),
+    results: locList(
+      [
+        'A live portal at maoon-green.vercel.app with a complete giving journey',
+        'Donors understand where money goes in seconds',
+        'A professional national-aid identity instead of a basic donation form',
+      ],
+      [
+        'بوابة لايف على maoon-green.vercel.app بمسار عطاء كامل',
+        'المتبرع يفهم أين يذهب ماله خلال ثوانٍ',
+        'هوية معونة وطنية احترافية بدل نموذج تبرع بسيط',
+      ]
+    ),
+  },
+  {
+    id: 36,
+    category: 'featured',
+    liveUrl: 'https://eradmall.com/',
+    title: loc('ERAD Mall — Computer Trading Platform', 'ERAD Mall — منصة تجارة أجهزة الكمبيوتر'),
+    subtitle: loc('Google Login • Customer Tracking • Internal Ops System', 'تسجيل Google • مراقبة العملاء • نظام تشغيلي داخلي'),
+    description: loc(
+      'A premium computer trading store for ERAD with a full public catalog (laptops, monitors, components, gaming, printers, and networking) plus an internal operations system. Customers sign in with Google, while the dashboard tracks customer activity, orders, and store performance from one place.',
+      'متجر احترافي لتجارة أجهزة الكمبيوتر لشركة ERAD مع كتالوج عام كامل (لابتوبات، شاشات، قطع، ألعاب، طابعات، وشبكات) بالإضافة لنظام تشغيلي داخلي. العملاء يسجّلون عبر Google، والداشبورد يراقب نشاط العملاء والطلبات وأداء المتجر من مكان واحد.'
+    ),
+    technologies: ['React', 'C# .NET', 'SQL Server', 'Google OAuth', 'E-Commerce', 'Admin Dashboard'],
+    image: '/projects/project-erad.jpg',
+    details: locList(
+      [
+        'Public storefront for laptops, monitors, components, desktops, gaming, accessories, printers, and networking',
+        'Google OAuth login for a fast, trusted customer sign-in',
+        'Internal system to monitor customers, orders, and browsing activity',
+        'Admin control for products, categories, special offers, and new arrivals',
+        'Service pages for hardware maintenance and network installation',
+        'Store location, contact, and operations management from one dashboard',
+      ],
+      [
+        'واجهة متجر عامة للابتوبات والشاشات والقطع وأجهزة الألعاب والإكسسوارات والطابعات والشبكات',
+        'تسجيل دخول عبر Google OAuth بسرعة وثقة',
+        'نظام داخلي لمراقبة العملاء والطلبات ونشاط التصفح',
+        'لوحة إدارة للمنتجات والتصنيفات والعروض والوصولات الجديدة',
+        'صفحات خدمات لصيانة الأجهزة وتركيب الشبكات',
+        'إدارة الموقع والتواصل والعمليات من داشبورد واحد',
+      ]
+    ),
+    challenges: locList(
+      [
+        'Connecting a public storefront with a private operations layer without leaking customer data',
+        'Solution: Role-based APIs, Google OAuth sessions, and an isolated admin dashboard for tracking',
+      ],
+      [
+        'ربط واجهة المتجر العامة مع طبقة تشغيل داخلية بدون تسريب بيانات العملاء',
+        'الحل: APIs حسب الصلاحيات، جلسات Google OAuth، وداشبورد إدارة معزول للمتابعة',
+      ]
+    ),
+    results: locList(
+      [
+        'Live store at eradmall.com with a complete product catalog',
+        'Customer login and activity tracking from a single internal system',
+        'Clear operations view for sales, services, and store management',
+      ],
+      [
+        'متجر لايف على eradmall.com مع كتالوج منتجات كامل',
+        'تسجيل العملاء ومتابعة نشاطهم من نظام داخلي واحد',
+        'رؤية تشغيلية واضحة للمبيعات والخدمات وإدارة المتجر',
+      ]
+    ),
+  },
+  {
+    id: 37,
+    category: 'featured',
+    liveUrl: 'https://sweetdrip.cafe/',
+    title: loc('Sweet Drip Cafe — Online Ordering', 'Sweet Drip — طلب أون لاين للكافيه'),
+    subtitle: loc('Inventory • Customer Tracking • Online Payments', 'مخزون • مراقبة العملاء • دفع أون لاين'),
+    description: loc(
+      'A dessert cafe website with online ordering, shop inventory, customer monitoring, and online payments. Customers browse cakes, ice cream, drinks, and pastries, grab daily offers, and checkout without calling the store.',
+      'موقع كافيه حلويات مع طلب أون لاين، مخزون للمحل، مراقبة العملاء، ودفع إلكتروني. الزبائن يتصفحون الكيك والآيس كريم والمشروبات والمعجنات، يأخذون عروض اليوم، ويدفعون بدون الاتصال بالمحل.'
+    ),
+    technologies: ['React', 'C# .NET', 'SQL Server', 'Online Payments', 'Inventory', 'Ordering'],
+    image: '/projects/project-sweetdrip.jpg',
+    details: locList(
+      [
+        'Online menu with categories: cakes, ice cream, drinks, and pastries',
+        'Daily offers and bundles with one-tap order flow',
+        'Shop inventory system synced with live orders',
+        'Customer tracking for repeats, favorites, and order history',
+        'Secure online payment at checkout',
+        'Warm cafe branding with location, hours, and pickup-ready UX',
+      ],
+      [
+        'قائمة أون لاين بتصنيفات: كيك، آيس كريم، مشروبات، ومعجنات',
+        'عروض يومية وباقات مع مسار طلب بضغطة واحدة',
+        'نظام مخزون للمحل متزامن مع الطلبات الحية',
+        'مراقبة العملاء للتكرار والمفضلات وسجل الطلبات',
+        'دفع إلكتروني آمن عند إتمام الطلب',
+        'هوية كافيه دافئة مع الموقع وساعات العمل وتجربة استلام جاهزة',
+      ]
+    ),
+    challenges: locList(
+      [
+        'Keeping inventory accurate while customers order in real time',
+        'Solution: Stock reservation on checkout with payment confirmation before deducting items',
+      ],
+      [
+        'الحفاظ على دقة المخزون بينما الزبائن يطلبون لحظياً',
+        'الحل: حجز المخزون عند الدفع مع تأكيد العملية قبل خصم الأصناف',
+      ]
+    ),
+    results: locList(
+      [
+        'Customers order online without phone calls or confusion',
+        'Shop staff see stock, orders, and customer activity in one system',
+        'Higher ticket size through bundles and featured desserts',
+      ],
+      [
+        'الزبائن يطلبون أون لاين بدون اتصال أو لبس',
+        'الموظفون يرون المخزون والطلبات ونشاط العملاء من نظام واحد',
+        'رفع قيمة الطلب عبر الباقات والحلويات المميزة',
+      ]
+    ),
+  },
+  {
+    id: 38,
+    category: 'featured',
+    liveUrl: 'https://mobadarah.net/',
+    title: loc('Mobadarah — Cosmetic Pharmaceuticals', 'Mobadarah — أدوية تجميلية'),
+    subtitle: loc('Google Login • Customer Insights • Cinematic Discount Engine', 'تسجيل Google • مراقبة العملاء • نظام خصومات خرافي'),
+    description: loc(
+      'A complete digital platform for a cosmetic pharmaceutical brand — Google login, customer monitoring, product catalog, and a beautifully designed discount engine that feels premium rather than like a coupon dump.',
+      'منصة رقمية كاملة لشركة أدوية تجميلية — تسجيل عبر Google، مراقبة العملاء، كتالوج منتجات، ونظام خصومات مصمم بطريقة أنيقة وخرافية بدل كوبونات عشوائية.'
+    ),
+    technologies: ['React', 'C# .NET', 'SQL Server', 'Google OAuth', 'Promotions Engine', 'Analytics'],
+    image: '/projects/project-mobadarah.jpg',
+    details: locList(
+      [
+        'Full brand website for cosmetic pharmaceutical products',
+        'Google OAuth login for customers and returning shoppers',
+        'Customer monitoring: visits, cart behavior, and purchase patterns',
+        'Discount system with elegant rules — timed offers, bundles, and VIP tiers',
+        'Product catalog with polished presentation and campaign landing states',
+        'Admin tools to launch, pause, and measure promotions in real time',
+      ],
+      [
+        'موقع علامة تجارية كامل لمنتجات الأدوية التجميلية',
+        'تسجيل دخول عبر Google للعملاء والعائدين',
+        'مراقبة العملاء: الزيارات، سلوك السلة، وأنماط الشراء',
+        'نظام خصومات بقواعد أنيقة — عروض مؤقتة، باقات، ومستويات VIP',
+        'كتالوج منتجات بعرض فاخر وحالات حملات ترويجية',
+        'أدوات إدارة لإطلاق وإيقاف وقياس العروض لحظياً',
+      ]
+    ),
+    challenges: locList(
+      [
+        'Making discounts feel premium instead of cheap or chaotic',
+        'Solution: Rule-based promotion engine with visual campaign states and customer-segment targeting',
+      ],
+      [
+        'جعل الخصومات تبدو فاخرة بدل رخيصة أو عشوائية',
+        'الحل: محرك عروض قائم على قواعد مع حالات حملات بصرية واستهداف شرائح العملاء',
+      ]
+    ),
+    results: locList(
+      [
+        'Brand-first shopping experience with a complete backend',
+        'Smarter promotions that customers actually want to use',
+        'Clear visibility into customer behavior and campaign performance',
+      ],
+      [
+        'تجربة تسوق بهوية العلامة مع باك إند كامل',
+        'عروض أذكى يستخدمها العملاء فعلاً',
+        'رؤية واضحة لسلوك العملاء وأداء الحملات',
+      ]
+    ),
+  },
+  {
+    id: 39,
+    category: 'featured',
+    title: loc('Enterprise POS — Cashier Control Suite', 'نظام كاش احترافي من A إلى Z'),
+    subtitle: loc('A–Z POS • Cashier Monitoring • Smart Returns', 'كاش كامل • مراقبة كاشيرات • مرتجعات احترافية'),
+    description: loc(
+      'A large-scale point-of-sale platform covering retail operations from A to Z: sales, inventory, invoices, shifts, permissions, and a professional returns workflow. Built specifically to monitor cashiers in real time and close every loophole around refunds.',
+      'نظام كاش كبير يغطي عمليات التجزئة من الألف إلى الياء: مبيعات، مخزون، فواتير، ورديات، صلاحيات، وسير عمل مرتجعات احترافي. مصمم خصيصاً لمراقبة الكاشيرات لحظياً وإغلاق أي ثغرة في الاسترجاع.'
+    ),
+    technologies: ['React', 'C# .NET', 'SQL Server', 'POS', 'Barcode', 'Audit Trail', 'Role-Based Access'],
+    image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200&h=800&fit=crop&q=80',
+    details: locList(
+      [
+        'Full POS flow: barcode checkout, multi-payment, invoices, and shift close',
+        'Live cashier monitoring — who sold what, when, and under which permission',
+        'Professional returns system with reason codes, manager approval, and original-invoice matching',
+        'Inventory, discounts, and price overrides with a complete audit trail',
+        'Role matrix for cashier, supervisor, and owner — every action is logged',
+        'Daily, weekly, and cashier-level reports for sales, voids, and refunds',
+      ],
+      [
+        'تدفق كاش كامل: باركود، دفع متعدد، فواتير، وإغلاق وردية',
+        'مراقبة كاشيرات لحظية — من باع ماذا ومتى وبأي صلاحية',
+        'نظام مرتجعات احترافي مع أسباب، موافقة مدير، وربط بالفاتورة الأصلية',
+        'مخزون وخصومات وتعديل أسعار مع سجل تدقيق كامل',
+        'مصفوفة صلاحيات للكاشير والمشرف والمالك — كل إجراء مسجّل',
+        'تقارير يومية وأسبوعية وعلى مستوى الكاشير للمبيعات والإلغاء والمرتجعات',
+      ]
+    ),
+    challenges: locList(
+      [
+        'Preventing cashier abuse on voids and returns without slowing checkout',
+        'Solution: Dual-control returns, timed permissions, and a live activity feed for supervisors',
+      ],
+      [
+        'منع التلاعب في الإلغاء والمرتجعات بدون إبطاء الكاش',
+        'الحل: مرتجعات بموافقة مزدوجة، صلاحيات موقوتة، وتغذية نشاط حية للمشرفين',
+      ]
+    ),
+    results: locList(
+      [
+        'Owners see every cashier action with full accountability',
+        'Returns become a controlled process instead of a leak',
+        'One system covers the entire shop floor from open to close',
+      ],
+      [
+        'صاحب المحل يرى كل إجراء للكاشير بمساءلة كاملة',
+        'المرتجعات تصبح عملية مضبوطة بدل ثغرة',
+        'نظام واحد يغطي أرضية المحل من الافتتاح حتى الإغلاق',
+      ]
+    ),
+  },
+  {
+    id: 40,
+    category: 'featured',
+    liveUrl: 'https://interactive-stream-arena-main.vercel.app/',
+    title: loc('Al-Daboor — Kick Stream Game Arena', 'الدبور — ألعاب تفاعلية لبثوث Kick'),
+    subtitle: loc('Live Chat Games • Streamer Tools • Cinematic UX', 'ألعاب على الشات • أدوات ستريمر • تجربة سينمائية'),
+    description: loc(
+      'An interactive platform for Kick streamers: connect the channel, pick a game, and let the audience play from chat. Multiple polished games — trivia, musical chairs, polls, ratings, secret phrase, flags, and riddles — with a cinematic Arabic-first experience.',
+      'منصة تفاعلية لأصحاب بثوث Kick: اربط القناة، اختر لعبة، والجمهور يلعب من الشات. أكثر من لعبة مصقولة — أسئلة، كراسي، تصويت، تقييم، جملة سرية، أعلام، وألغاز — بتجربة عربية سينمائية واحترافية.'
+    ),
+    technologies: ['React', 'TypeScript', 'Kick Chat API', 'WebSockets', 'Framer Motion', 'Realtime'],
+    image: '/projects/project-aldaboor.jpg',
+    details: locList(
+      [
+        'Kick channel connection with live chat gameplay',
+        'Game suite: trivia, musical chairs, live polls, 0–10 ratings, secret phrase, flags, and riddles',
+        'Each card opens a dedicated game page with a professional flow',
+        'Streamer-first dashboard for verified streamers, chat, about, and contact',
+        'Realtime scoring — first correct chat answer wins the point',
+        'Cinematic Arabic UI designed for stream overlays and audience energy',
+      ],
+      [
+        'ربط قناة Kick مع لعب مباشر من الشات',
+        'مجموعة ألعاب: أسئلة، كراسي، تصويت، تقييم من ٠ إلى ١٠، جملة سرية، أعلام، وألغاز',
+        'كل كرت يفتح صفحة لعبة مستقلة بسير عمل احترافي',
+        'لوحة ستريمر للستريمر الموثقين والشات ومن نحن والتواصل',
+        'نقاط لحظية — أول جواب صحيح من الشات يفوز',
+        'واجهة عربية سينمائية مصممة للأوفرلاي وطاقة الجمهور',
+      ]
+    ),
+    challenges: locList(
+      [
+        'Mapping noisy live chat into fair, instant game events',
+        'Solution: Normalized chat parser, first-correct-wins locks, and per-game scoring rooms',
+      ],
+      [
+        'تحويل شات حيّ وصاخب إلى أحداث لعب عادلة وفورية',
+        'الحل: محلل شات منظّم، قفل أول جواب صحيح، وغرف نقاط لكل لعبة',
+      ]
+    ),
+    results: locList(
+      [
+        'Streamers run interactive nights without extra mods or messy tools',
+        'Audience stays in chat because every message can win',
+        'A distinctive Kick-native arena instead of a generic overlay',
+      ],
+      [
+        'الستريمر يدير ليالي تفاعلية بدون أدوات مبعثرة',
+        'الجمهور يبقى في الشات لأن كل رسالة ممكن تفوز',
+        'منصة Kick مميزة بدل أوفرلاي عام',
+      ]
+    ),
+  },
+  {
+    id: 41,
+    category: 'featured',
+    liveUrl: 'https://planetone-2.vercel.app/',
+    title: loc('Planet One — Documentary Studio (Orbit)', 'Planet One — استوديو وثائقي (Orbit)'),
+    subtitle: loc('Cinematic Reel • 3D Archive • Bilingual Film House', 'ريل سينمائي • أرشيف 3D • بيت أفلام ثنائي اللغة'),
+    description: loc(
+      'One of two distinct brand websites created for Planet One, a documentary film house. This version is a cinematic orbit: spinning film reels, immersive archive browsing, and a bilingual Arabic/English experience for a studio that films people, planets, and the space between them.',
+      'واحد من موقعين تعريفيين مختلفين تماماً لشركة Planet One للأفلام الوثائقية. هذه النسخة سينمائية دوّارة: ريل أفلام، أرشيف غامر، وتجربة عربية/إنجليزية لبيت إنتاج يصوّر الناس والكواكب والمسافة بينهما.'
+    ),
+    technologies: ['React', 'TypeScript', 'Framer Motion', 'Three.js', 'Tailwind CSS', 'i18n'],
+    image: '/projects/project-planetone-2.jpg',
+    details: locList(
+      [
+        'Hero built like a film reel with orbiting titles and drag-to-spin interaction',
+        'Selected work archive with ratings, directors, and trailer-ready presentation',
+        'Bilingual Arabic/English studio voice without breaking the cinematic rhythm',
+        'Stats, about, and contact framed as a production house — not a generic agency',
+        'A completely different visual language from Planet One Studio Catalogue',
+      ],
+      [
+        'هيرو كريل أفلام مع عناوين تدور وتفاعل السحب للدوران',
+        'أرشيف أعمال مختارة مع تقييمات ومخرجين وعرض جاهز للتريلر',
+        'صوت الاستوديو بالعربي والإنجليزي بدون كسر الإيقاع السينمائي',
+        'إحصائيات ونبذة وتواصل بإطار بيت إنتاج — مش شركة عامة',
+        'لغة بصرية مختلفة تماماً عن نسخة Planet One Studio Catalogue',
+      ]
+    ),
+    challenges: locList(
+      [
+        'Giving the same film house two identities without making either feel like a clone',
+        'Solution: Separate art direction, motion system, and information architecture per site',
+      ],
+      [
+        'إعطاء نفس بيت الإنتاج هويتين بدون أن يبدو أي موقع نسخة مكررة',
+        'الحل: اتجاه فني ونظام حركة وهندسة معلومات مستقلة لكل موقع',
+      ]
+    ),
+    results: locList(
+      [
+        'A memorable first impression for festivals, commissions, and collaborators',
+        'Two brand directions the client can actually choose from',
+        'Documentary storytelling translated into web motion',
+      ],
+      [
+        'انطباع أول لا يُنسى للمهرجانات والعمولات والشركاء',
+        'اتجاهان للهوية يقدر العميل يختار منهما',
+        'السرد الوثائقي مترجم إلى حركة على الويب',
+      ]
+    ),
+  },
+  {
+    id: 42,
+    category: 'featured',
+    liveUrl: 'https://planetone-1.vercel.app/',
+    title: loc('Planet One — Documentary Studio (Catalogue)', 'Planet One — استوديو وثائقي (Catalogue)'),
+    subtitle: loc('Editorial Grid • Film Catalogue • Production House', 'شبكة تحريرية • كتالوج أفلام • بيت إنتاج'),
+    description: loc(
+      'The second Planet One website — a cleaner editorial catalogue. Films are presented as a production house archive with duration, ratings, and a four-step process from research to release. Same client, completely different design system.',
+      'الموقع الثاني لـ Planet One — كتالوج تحريري أنظف. الأفلام تُعرض كأرشيف بيت إنتاج مع المدة والتقييم وعملية من أربع خطوات من البحث حتى الإصدار. نفس العميل، نظام تصميم مختلف تماماً.'
+    ),
+    technologies: ['React', 'TypeScript', 'Framer Motion', 'Tailwind CSS', 'i18n'],
+    image: '/projects/project-planetone-1.jpg',
+    details: locList(
+      [
+        'Editorial film catalogue with duration, year, and rating per title',
+        'About and process sections: research, shooting, edit & sound, release',
+        'Bilingual toggle and a quieter, print-like visual system',
+        'Contact and commission flow for new documentary stories',
+        'Designed as a true alternative to the Orbit version — not a restyle',
+      ],
+      [
+        'كتالوج أفلام تحريري مع المدة والسنة والتقييم لكل عنوان',
+        'أقسام النبذة والعملية: بحث، تصوير، مونتاج وصوت، إصدار',
+        'تبديل لغات ونظام بصري أهدأ أقرب للمطبوعات',
+        'مسار تواصل وعمولات لقصص وثائقية جديدة',
+        'مصمم كبديل حقيقي لنسخة Orbit — مش إعادة تلوين',
+      ]
+    ),
+    challenges: locList(
+      [
+        'Keeping the catalogue cinematic without the heavy 3D of the sister site',
+        'Solution: Typography, stills, and restrained motion that still feel like cinema',
+      ],
+      [
+        'إبقاء الكتالوج سينمائياً بدون 3D الثقيل للموقع الشقيق',
+        'الحل: تايبوغرافيا ولقطات ثابتة وحركة محسوبة ما زالت تشبه السينما',
+      ]
+    ),
+    results: locList(
+      [
+        'A calmer brand option for clients who want clarity over spectacle',
+        'Films are easy to browse, compare, and share',
+        'Proof that one brief can become two world-class websites',
+      ],
+      [
+        'خيار هوية أهدأ لمن يريد وضوحاً أكثر من الفرجة',
+        'الأفلام سهلة التصفح والمقارنة والمشاركة',
+        'دليل أن الطلب الواحد يقدر يصير موقعين بمستوى عالمي',
+      ]
+    ),
+  },
+  {
+    id: 43,
+    category: 'featured',
+    liveUrl: 'https://hr-navy-two.vercel.app/',
+    demoHint: loc('Try it live — username: admin  /  password: 222', 'جرّبه مباشرة — اليوزر: admin  /  الباسورد: 222'),
+    title: loc('Modern HR Operating System', 'نظام HR جديد عملي وأنيق'),
+    subtitle: loc('Live Demo • People Ops • Clean Daily Workflow', 'تجربة مباشرة • موارد بشرية • سير عمل يومي واضح'),
+    description: loc(
+      'A new HR system designed to feel good to use every day — employees, attendance, roles, and internal operations in a clean navy interface. Practical, fast, and ready to try with a public demo login.',
+      'نظام HR جديد مصمم ليكون ممتعاً وعملياً كل يوم — موظفون، دوام، صلاحيات، وعمليات داخلية بواجهة navy نظيفة. واضح، سريع، وجاهز للتجربة بتسجيل دخول تجريبي.'
+    ),
+    technologies: ['React', 'TypeScript', 'C# .NET', 'SQL Server', 'HR', 'Role-Based Access'],
+    image: '/projects/project-hr.jpg',
+    details: locList(
+      [
+        'Clean HR dashboard for employees, attendance, and people operations',
+        'Practical daily workflow instead of a bloated enterprise maze',
+        'Role-based access for admin and staff',
+        'Modern navy UI with fast navigation and readable tables',
+        'Public demo so clients can click through the real product',
+      ],
+      [
+        'داشبورد HR نظيف للموظفين والدوام وعمليات الأفراد',
+        'سير عمل يومي عملي بدل متاهة أنظمة مؤسسية',
+        'صلاحيات حسب الدور للأدمن والموظفين',
+        'واجهة navy عصرية مع تنقل سريع وجداول مقروءة',
+        'تجربة عامة حتى العميل يضغط ويتجوّل في المنتج الحقيقي',
+      ]
+    ),
+    challenges: locList(
+      [
+        'Making HR feel simple without hiding the operations companies actually need',
+        'Solution: Opinionated screens, short paths, and an admin demo that shows the real flow',
+      ],
+      [
+        'جعل الـ HR بسيطاً بدون إخفاء العمليات التي تحتاجها الشركات فعلاً',
+        'الحل: شاشات محددة، مسارات قصيرة، وتجربة أدمن تعرض التدفق الحقيقي',
+      ]
+    ),
+    results: locList(
+      [
+        'A live HR product clients can test in minutes',
+        'Clearer people operations with less training',
+        'A modern alternative to heavy, ugly HR tools',
+      ],
+      [
+        'منتج HR لايف يقدر العميل يجربه خلال دقائق',
+        'عمليات أفراد أوضح مع تدريب أقل',
+        'بديل عصري لأدوات HR الثقيلة والسيئة',
+      ]
+    ),
+  },
   {
     id: 22,
     category: 'featured',
@@ -26,7 +554,8 @@ export const featuredProjects: Project[] = [
       'منصة احترافية لسيرفر FiveM حيث يسجّل اللاعبون عبر Discord. تشمل لوحة إدارة كاملة، شات مباشر بتصميم SweetAlert، تواصل مع الدعم، وربط عميق مع Discord — عند تقديم طلب إلكترونيات والقبول، يحصل اللاعب تلقائياً على الرول في سيرفر Infinity. فتح تذكرة من الموقع يفعّل سير عمل احترافي وآلي.'
     ),
     technologies: ['React', 'C# .NET', 'SQL Server', 'Discord OAuth', 'SweetAlert2', 'Live Chat', 'FiveM'],
-    image: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?w=1200&h=800&fit=crop&q=80',
+    image: '/projects/project-infinity.jpg',
+    liveUrl: 'https://infinite-navy.vercel.app/',
     details: locList(
       [
         'Discord OAuth login for FiveM players with secure session management',
@@ -80,7 +609,8 @@ export const featuredProjects: Project[] = [
       'نظام كاش كامل واحترافي لمحل المنال للبوظة. يعمل حالياً بشكل يومي — يدير المبيعات والمخزون وعمليات المحل بواجهة مرتبة وواضحة.'
     ),
     technologies: ['React', 'C# .NET', 'SQLite', 'POS System'],
-    image: 'https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=1200&h=800&fit=crop&q=80',
+    image: '/projects/project-manal.jpg',
+    liveUrl: 'https://manal-ecru.vercel.app/',
     details: locList(
       [
         'Fast POS checkout flow optimized for ice cream retail',
@@ -130,7 +660,8 @@ export const featuredProjects: Project[] = [
       'نظام كاش سوبرماركت احترافي مع إدارة كاملة للموظفين والفواتير ومعالجة المرتجعات. Backend وقاعدة بيانات متكاملة لعمليات التجزئة.'
     ),
     technologies: ['React', 'C# .NET', 'SQL Server', 'POS', 'Barcode'],
-    image: 'https://images.unsplash.com/photo-1578916171728-46686eac8d58?w=1200&h=800&fit=crop&q=80',
+    image: '/projects/project-supermarket.jpg',
+    liveUrl: 'https://supermarkit-ltrb.vercel.app/',
     details: locList(
       [
         'POS checkout with barcode scanning and multi-payment support',
@@ -331,6 +862,7 @@ export const featuredProjects: Project[] = [
     ),
     technologies: ['React', 'C# .NET', 'SQL Server', 'Booking System'],
     image: '/projects/project-barber.jpg',
+    liveUrl: 'https://cuth-iota.vercel.app/',
     details: locList(
       [
         'Barber profiles with availability calendar per stylist',
@@ -437,6 +969,13 @@ export const featuredProjects: Project[] = [
     ),
     technologies: ['C# .NET', 'SQL Server', 'React', 'ERP', 'Accounting'],
     image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200&h=800&fit=crop&q=80',
+    acronym: 'Accounting',
+    fullName: loc('Financial Accounting', 'المحاسبة المالية'),
+    meaning: loc(
+      'Accounting is the system that records every dollar in and out of the business — sales, purchases, invoices, and financial reports — so you always know if the company is profitable.',
+      'المحاسبة هي النظام الذي يسجّل كل مبلغ يدخل أو يخرج من الشركة — مبيعات، مشتريات، فواتير، وتقارير مالية — حتى تعرف دائماً إذا الشركة رابحة أم لا.'
+    ),
+    videoId: 'x4UJVfnCBms',
     details: locList(
       [
         'General ledger, chart of accounts, and journal entry management',
@@ -487,6 +1026,13 @@ export const featuredProjects: Project[] = [
     ),
     technologies: ['C# .NET', 'SQL Server', 'React', 'ERP', 'CRM'],
     image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=800&fit=crop&q=80',
+    acronym: 'CRM',
+    fullName: loc('Customer Relationship Management', 'إدارة علاقات العملاء'),
+    meaning: loc(
+      'CRM means Customer Relationship Management. It keeps every lead, customer, deal, and follow-up in one place so the sales team never loses a conversation — and knows exactly what to do next.',
+      'CRM تعني إدارة علاقات العملاء. يجمع كل عميل محتمل، عميل حالي، صفقة، ومتابعة في مكان واحد حتى فريق المبيعات ما يضيع أي تواصل — ويعرف الخطوة التالية بوضوح.'
+    ),
+    videoId: '7L7nDEc2P14',
     details: locList(
       [
         'Contact and lead management with custom fields',
@@ -537,6 +1083,13 @@ export const featuredProjects: Project[] = [
     ),
     technologies: ['C# .NET', 'SQL Server', 'React', 'ERP', 'HR'],
     image: 'https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=1200&h=800&fit=crop&q=80',
+    acronym: 'HR',
+    fullName: loc('Human Resources', 'الموارد البشرية'),
+    meaning: loc(
+      'HR means Human Resources. It manages people inside the company: hiring, employee files, attendance, leave requests, and the organization structure — instead of scattered Excel sheets.',
+      'HR تعني الموارد البشرية. تدير الناس داخل الشركة: التوظيف، ملفات الموظفين، الحضور، الإجازات، والهيكل التنظيمي — بدل جداول Excel المتفرقة.'
+    ),
+    videoId: 'rTOjFQg8Baw',
     details: locList(
       [
         'Employee profiles, documents, and contract management',
@@ -587,6 +1140,13 @@ export const featuredProjects: Project[] = [
     ),
     technologies: ['C# .NET', 'SQL Server', 'React', 'ERP', 'Payroll'],
     image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&h=800&fit=crop&q=80',
+    acronym: 'Payroll',
+    fullName: loc('Employee Payroll', 'الرواتب والمستحقات'),
+    meaning: loc(
+      'Payroll is the system that calculates salaries, allowances, and deductions, then pays employees correctly and on time. Attendance, overtime, and bonuses show up immediately in the pay run.',
+      'Payroll هو النظام الذي يحسب الرواتب والبدلات والخصومات، ثم يدفع للموظفين بشكل صحيح وفي وقتهم. الحضور، الإضافي، والمكافآت تظهر فوراً في كشف الراتب.'
+    ),
+    videoId: 'NfaNNtwDHGE',
     details: locList(
       [
         'Salary structures, allowances, and deduction rules',
@@ -637,6 +1197,13 @@ export const featuredProjects: Project[] = [
     ),
     technologies: ['C# .NET', 'SQL Server', 'React', 'ERP', 'Retail', 'Inventory'],
     image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&h=800&fit=crop&q=80',
+    acronym: 'Retail',
+    fullName: loc('Retail & Inventory', 'التجزئة والمخزون'),
+    meaning: loc(
+      'Retail & Inventory tracks what you sell and what you still have in stock across shops and warehouses — live, not on paper. You see stockouts before they happen.',
+      'Retail والمخزون يتتبع ماذا تبيع وماذا بقي لديك في المحل والمستودع — لحظياً، وليس على ورق. ترى نفاد المخزون قبل أن يحدث.'
+    ),
+    videoId: '0NOER-Lle-0',
     details: locList(
       [
         'Multi-warehouse inventory with live stock levels',
@@ -670,7 +1237,7 @@ export const featuredProjects: Project[] = [
         'Single retail platform connecting sales, inventory, and reporting',
       ],
       [
-        'رؤية مخزون لحظية تeliminates مفاجآت المخزون',
+        'Live inventory visibility that removes stock surprises',
         'تقليل نفاد المخزون والتكديس الزائد',
         'منصة Retail واحدة تربط المبيعات والمخزون والتقارير',
       ]

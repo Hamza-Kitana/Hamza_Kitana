@@ -1,14 +1,10 @@
 import project1 from '@/assets/project-1-algorithms.jpg';
-import project2 from '@/assets/project-2-driver.jpg';
-import project3 from '@/assets/project-3-perfume.jpg';
 import project4 from '@/assets/project-4-retail.jpg';
 import project5 from '@/assets/project-5-ai-agent.jpg';
 import project6 from '@/assets/project-6-marketing.jpg';
 import project7 from '@/assets/project-7-crm.jpg';
 import project8 from '@/assets/project-8-realestate.jpg';
-import project9 from '@/assets/project-9-almohra.jpg';
 import project10 from '@/assets/project-10-transport.jpg';
-import project11 from '@/assets/project-11-bus-rental.jpg';
 import { featuredProjects, type Project } from './featuredProjects';
 import { locEn, locListEn } from '@/lib/localized';
 
@@ -24,6 +20,7 @@ interface LegacyProject {
   challenges: string[];
   results: string[];
   image: string;
+  liveUrl?: string;
 }
 
 const legacyProjectsRaw: LegacyProject[] = [
@@ -56,7 +53,8 @@ const legacyProjectsRaw: LegacyProject[] = [
     subtitle: "Logistics Optimization Platform",
     description: "Web system for managing drivers, shipment schedules, and load distribution with React frontend and C# .NET backend, deployed on VPS with custom domain.",
     technologies: ["React", "C# .NET", "SQLite", "Nginx", "VPS Hosting"],
-    image: project2,
+    image: "/projects/project-driver.jpg",
+    liveUrl: "https://driverm.xyz/",
     details: [
       "Login pages, admin dashboard, driver management, shipment scheduling",
       "REST APIs for drivers, shipments, tracking links, and notifications",
@@ -81,7 +79,8 @@ const legacyProjectsRaw: LegacyProject[] = [
     subtitle: "Full-Stack Amazon-like Platform",
     description: "Complete e-commerce platform specializing in perfumes, built with React and Django with Tap payment gateway integration, optimized for high traffic.",
     technologies: ["React", "Django", "Python", "PostgreSQL", "Tap Payment Gateway"],
-    image: project3,
+    image: "/projects/project-ouddess.jpg",
+    liveUrl: "https://ouddess.ae/",
     details: [
       "React with responsive design, product pages, filtering, search, cart, checkout flow",
       "Django REST Framework APIs for products, users, orders, payments",
@@ -217,7 +216,8 @@ const legacyProjectsRaw: LegacyProject[] = [
     subtitle: "Corporate Services Website",
     description: "Company website for finishing and decoration services built with React and C# .NET, featuring portfolio gallery and bilingual support.",
     technologies: ["React", "C# .NET", "SQL Server", "SEO"],
-    image: project9,
+    image: "/projects/project-mohra.jpg",
+    liveUrl: "https://mohratest.vercel.app/",
     details: [
       "Pages: about us, services, portfolio gallery, quote request form, contact",
       "Simple CMS dashboard for adding projects and images",
@@ -263,7 +263,8 @@ const legacyProjectsRaw: LegacyProject[] = [
     subtitle: "Modern Bilingual Bus Rental Platform",
     description: "A modern, responsive website for International Fleet Bus Rental company in Rusaifah, Jordan. Features bilingual interface (Arabic/English), contemporary design, dark mode support, and comprehensive bus rental services for corporate, domestic, and international trips.",
     technologies: ["React", "TypeScript", "Vite", "Tailwind CSS", "Shadcn/UI", "TanStack Query", "React Router"],
-    image: project11,
+    image: "/projects/project-fleet.jpg",
+    liveUrl: "https://if-gules.vercel.app/",
     details: [
       "Fully responsive design with mobile-first approach and beautiful UI using Tailwind CSS",
       "Complete bilingual support (Arabic/English) with RTL/LTR switching",
@@ -293,7 +294,8 @@ const legacyProjectsRaw: LegacyProject[] = [
     subtitle: "Conference & Awards Website - Dubai, UAE",
     description: "A professional, modern website for the Alternative Energy Summit & Awards 2026 in Dubai. Showcases full conference details, animated statistics, sponsors, awards categories, and a complete registration flow.",
     technologies: ["React", "TypeScript", "Vite", "Tailwind CSS", "Shadcn/UI", "Framer Motion", "React Router"],
-    image: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=1200&h=800&fit=crop&q=80",
+    image: "/projects/project-energy.jpg",
+    liveUrl: "https://energysummitad.com/",
     details: [
       "Home: Hero with event title/date, animated stats (e.g., 800+ attendees, 65+ speakers), sponsors marquee",
       "Expected Participation: large counters with icons, clean responsive layout",
@@ -324,7 +326,8 @@ const legacyProjectsRaw: LegacyProject[] = [
     subtitle: "Complete Integrated Company Platform",
     description: "A comprehensive full-stack system for Applkanji company with complete custom design from scratch, featuring all company operations and management modules.",
     technologies: ["React", "TypeScript", "C# .NET", "SQL Server", "Tailwind CSS"],
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=800&fit=crop&q=80",
+    image: "/projects/project-applkanji.jpg",
+    liveUrl: "https://applkanji-delta.vercel.app/",
     details: [
       "Complete custom design and UI/UX from scratch",
       "Full-stack application with React frontend and C# .NET backend",
@@ -549,6 +552,7 @@ const legacyProjects: Project[] = legacyProjectsRaw.map((p) => ({
   challenges: locListEn(p.challenges),
   results: locListEn(p.results),
   image: p.image,
+  liveUrl: p.liveUrl,
 }));
 
 export const projects: Project[] = [...featuredProjects, ...legacyProjects];
