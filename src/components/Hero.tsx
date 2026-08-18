@@ -1,11 +1,11 @@
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Facebook, Instagram, Download, GraduationCap, BookOpen, Users, FolderOpen } from 'lucide-react';
+import { Github, Linkedin, Facebook, Instagram, Download, GraduationCap, BookOpen, Users, FolderOpen, HeartHandshake } from 'lucide-react';
 import { Button } from './ui/button';
 import { Card } from './ui/card';
 import profileImage from '/me.png';
 import ProfileCard from './ProfileCard';
 import { useLanguage } from '@/i18n/LanguageContext';
-import { PROFILE_NAME } from '@/data/profile';
+import { PROFILE_CONTACT, PROFILE_NAME } from '@/data/profile';
 
 const DiscordIcon = () => (
   <svg className="w-6 h-6 text-primary" viewBox="0 0 24 24" fill="currentColor">
@@ -141,7 +141,7 @@ export const Hero = ({ onViewProjects }: { onViewProjects?: () => void }) => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.1 }}
-              className="flex flex-row gap-3"
+              className="flex flex-row flex-wrap gap-3"
             >
               <Button
                 size="lg"
@@ -164,6 +164,17 @@ export const Hero = ({ onViewProjects }: { onViewProjects?: () => void }) => {
                   {t.hero.viewProjects}
                 </Button>
               )}
+              <Button
+                size="lg"
+                variant="outline"
+                className="flex-1 sm:flex-none border-2 border-rose-400/60 text-rose-300 hover:bg-rose-500/15 hover:text-rose-200 hover:border-rose-300/70 transition-all"
+                asChild
+              >
+                <a href={PROFILE_CONTACT.donate} target="_blank" rel="noopener noreferrer">
+                  <HeartHandshake className="me-2 h-5 w-5" />
+                  {t.contact.donate}
+                </a>
+              </Button>
             </motion.div>
           </motion.div>
 
