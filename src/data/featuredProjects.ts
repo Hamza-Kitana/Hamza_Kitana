@@ -23,6 +23,57 @@ export interface Project {
 
 export const featuredProjects: Project[] = [
   {
+    id: 47,
+    category: 'featured',
+    liveUrl: 'https://womenssalon.vercel.app/',
+    title: loc('Lamset Ward — Luxury Women’s Salon', 'لمسة ورد — صالون نسائي فاخر'),
+    subtitle: loc('Booking • Services • Gallery • Admin', 'حجز مواعيد • خدمات • معرض • إدارة'),
+    description: loc(
+      'A complete luxury website for Lamset Ward, a women’s salon in Amman. Guests land on a calm cinematic brand, browse hair, makeup, nails, skin, and bridal packages with prices and duration, then book a time online — with bilingual Arabic/English, a gallery, location, and a private admin panel.',
+      'موقع كامل لصالون لمسة ورد في عمّان. الزائرة تدخل هوية سينمائية هادئة، تتصفح الشعر والمكياج والأظافر والبشرة وباقات العروس مع السعر والمدة، ثم تحجز موعدها أونلاين — بعربية وإنجليزية، ومعرض، وموقع، ولوحة إدارة خاصة.'
+    ),
+    technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Booking System'],
+    image: '/projects/project-womenssalon.jpg',
+    details: locList(
+      [
+        'Full salon site: home, services, booking, gallery, location, and admin',
+        'Service catalog with prices, duration, and bridal packages — hair, makeup, nails, skin, henna, and more',
+        'Online booking: pick services, day, time, party size, name, and international phone',
+        'Arabic-first luxury identity with English toggle, ambient sound, and cinematic intro',
+        'Private admin entry so the salon can manage the experience without WhatsApp chaos',
+      ],
+      [
+        'موقع صالون كامل: رئيسية، خدمات، حجز، معرض، موقع، وإدارة',
+        'كتالوج خدمات بأسعار ومدد وباقات عروس — شعر، مكياج، أظافر، بشرة، حناء والمزيد',
+        'حجز أونلاين: اختيار الخدمات واليوم والساعة وعدد الأشخاص والاسم ورقم دولي',
+        'هوية فاخرة عربية أولاً مع تبديل إنجليزي وصوت محيطي ودخول سينمائي',
+        'دخول إدارة خاص حتى الصالون يدير التجربة بدون فوضى الواتساب',
+      ]
+    ),
+    challenges: locList(
+      [
+        'Making a full salon product feel private and elegant — not a noisy booking form',
+        'Solution: A calm brand path — intro, services with clear prices, then a short booking flow that only asks what the salon needs',
+      ],
+      [
+        'جعل منتج الصالون الكامل يبدو خاصاً وأنيقاً — وليس نموذج حجز مزعج',
+        'الحل: مسار هوية هادئ — دخول، خدمات بأسعار واضحة، ثم حجز قصير يسأل فقط ما يحتاجه الصالون',
+      ]
+    ),
+    results: locList(
+      [
+        'Live salon at womenssalon.vercel.app',
+        'Clients book hair, makeup, nails, and bridal packages without calling',
+        'A distinctive luxury identity for a women’s salon in Amman',
+      ],
+      [
+        'صالون لايف على womenssalon.vercel.app',
+        'العميلات يحجزن الشعر والمكياج والأظافر وباقات العروس بدون اتصال',
+        'هوية فاخرة مميزة لصالون نسائي في عمّان',
+      ]
+    ),
+  },
+  {
     id: 46,
     category: 'featured',
     liveUrl: 'https://austin-town.vercel.app/',
