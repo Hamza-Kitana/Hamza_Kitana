@@ -117,6 +117,9 @@ const en = {
     availableWorldwide: 'Available Worldwide',
     socials: 'Find me online',
     copyEmail: 'Copy email',
+    donate: 'Support my work',
+    donateHint: 'Send a donation on Creators',
+    donateCta: 'Donate now',
   },
   footer: {
     rightsSuffix: 'All rights reserved.',
@@ -247,6 +250,9 @@ const ar: TranslationKeys = {
     availableWorldwide: 'متاح عالمياً',
     socials: 'تواصل عبر السوشال',
     copyEmail: 'نسخ الإيميل',
+    donate: 'ادعم عملي',
+    donateHint: 'تبرّع عبر كريترز',
+    donateCta: 'تبرع الآن',
   },
   footer: {
     rightsSuffix: 'جميع الحقوق محفوظة.',

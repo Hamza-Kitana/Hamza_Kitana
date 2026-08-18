@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Phone, Mail, MapPin, Copy, Check, Github, Linkedin, Facebook, Instagram } from 'lucide-react';
+import { Phone, Mail, MapPin, Copy, Check, Github, Linkedin, Facebook, Instagram, HeartHandshake, ExternalLink } from 'lucide-react';
 import { useState } from 'react';
 import { useLanguage } from '@/i18n/LanguageContext';
 import { PROFILE_CONTACT, PROFILE_NAME } from '@/data/profile';
@@ -57,7 +57,7 @@ export const Contact = () => {
               <p className="text-xs sm:text-sm uppercase tracking-[0.25em] text-primary/80 font-semibold">
                 {PROFILE_NAME}
               </p>
-              <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold text-gradient glow-text">
+              <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold text-gradient glow-text leading-[1.45] pt-[0.2em] pb-[0.08em]">
                 {t.contact.heading}
               </h2>
               <p className="text-base sm:text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -103,6 +103,32 @@ export const Contact = () => {
                 </div>
               </a>
             </motion.div>
+
+            <motion.a
+              href={PROFILE_CONTACT.donate}
+              target="_blank"
+              rel="noopener noreferrer"
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.18 }}
+              className="group relative mx-auto flex max-w-2xl items-center gap-4 overflow-hidden rounded-2xl border border-rose-400/30 bg-gradient-to-r from-rose-500/15 via-amber-400/10 to-primary/10 px-5 py-4 sm:px-6 sm:py-5 text-start hover:border-rose-300/50 hover:shadow-[0_0_32px_rgba(251,113,133,0.18)] transition-all active:scale-[0.99]"
+            >
+              <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-rose-500/20 text-rose-300">
+                <HeartHandshake className="h-6 w-6" />
+              </span>
+              <span className="min-w-0 flex-1">
+                <span className="block text-base sm:text-lg font-semibold text-foreground">
+                  {t.contact.donate}
+                </span>
+                <span className="block text-xs sm:text-sm text-muted-foreground mt-0.5">
+                  {t.contact.donateHint} — creators.sa/hamzakitana
+                </span>
+              </span>
+              <span className="inline-flex items-center gap-1.5 shrink-0 rounded-full bg-rose-400/20 px-3 py-1.5 text-xs sm:text-sm font-semibold text-rose-200">
+                {t.contact.donateCta}
+                <ExternalLink className="h-3.5 w-3.5" />
+              </span>
+            </motion.a>
 
             <motion.div
               initial={{ opacity: 0, y: 16 }}

@@ -9,6 +9,7 @@ export const PROFILE_CONTACT = {
   emailHref: 'mailto:hamzanael@hotmail.com',
   locationEn: 'Dubai, UAE',
   locationAr: 'دبي، الإمارات',
+  donate: 'https://creators.sa/hamzakitana',
   socials: [
     { label: 'GitHub', href: 'https://github.com/Hamza-Kitana' },
     { label: 'LinkedIn', href: 'https://www.linkedin.com/in/hamza-kitana-384339296/' },

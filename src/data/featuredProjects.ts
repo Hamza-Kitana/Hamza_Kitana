@@ -23,6 +23,57 @@ export interface Project {
 
 export const featuredProjects: Project[] = [
   {
+    id: 46,
+    category: 'featured',
+    liveUrl: 'https://austin-town.vercel.app/',
+    title: loc('Austin Town CFW RP — Rules & Store', 'Austin Town CFW RP — قوانين ومتجر'),
+    subtitle: loc('FiveM City Hub • Server Rules • In-Game Store', 'مركز المدينة • قوانين السيرفر • متجر اللعبة'),
+    description: loc(
+      'A cinematic hub for Austin Town CFW RP — a FiveM roleplay city. Players land on a high-energy Arabic site, read the server rules, open the store for cars and projects, and jump straight to Discord for support and applications.',
+      'مركز سينمائي لمدينة Austin Town CFW RP على FiveM. اللاعب يدخل موقعاً عربياً بطاقة عالية، يقرأ القوانين، يفتح المتجر للسيارات والمشاريع، وينتقل مباشرة للديسكورد للدعم والتقديم.'
+    ),
+    technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'FiveM', 'Discord'],
+    image: '/projects/project-austintown.jpg',
+    details: locList(
+      [
+        'Cinematic city landing with Austin Town branding and CFW RP identity',
+        'Dedicated Rules section so new players know everything before joining',
+        'In-game store for cars and projects with a direct enter path',
+        'Discord gateway for support, applications, and the city community',
+        'Arabic-first experience built for FiveM roleplay energy — not a generic server page',
+      ],
+      [
+        'صفحة مدينة سينمائية بهوية Austin Town و CFW RP',
+        'قسم قوانين واضح حتى اللاعب الجديد يعرف كل شيء قبل الدخول',
+        'متجر داخل اللعبة للسيارات والمشاريع مع مسار دخول مباشر',
+        'بوابة ديسكورد للدعم والتقديم ومجتمع المدينة',
+        'تجربة عربية بطاقة FiveM RP — وليست صفحة سيرفر عامة',
+      ]
+    ),
+    challenges: locList(
+      [
+        'Packing rules, store, and Discord into one page without feeling like a messy menu',
+        'Solution: Three cinematic entry cards — Rules, Store, Discord — with a city-first visual language',
+      ],
+      [
+        'جمع القوانين والمتجر والديسكورد في صفحة واحدة بدون فوضى قوائم',
+        'الحل: ثلاث كروت دخول سينمائية — قوانين، متجر، ديسكورد — بلغة بصرية للمدينة',
+      ]
+    ),
+    results: locList(
+      [
+        'Live city hub at austin-town.vercel.app',
+        'New players read the rules and reach the store in seconds',
+        'A distinctive FiveM identity that feels like walking into the city',
+      ],
+      [
+        'مركز مدينة لايف على austin-town.vercel.app',
+        'اللاعب الجديد يقرأ القوانين ويصل للمتجر خلال ثوانٍ',
+        'هوية FiveM مميزة كأنك داخل المدينة من أول ثانية',
+      ]
+    ),
+  },
+  {
     id: 45,
     category: 'featured',
     liveUrl: 'https://royal-care-eta.vercel.app/',

@@ -32,7 +32,7 @@ export const Hero = ({ onViewProjects }: { onViewProjects?: () => void }) => {
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="space-y-3 sm:space-y-4 md:space-y-5 md:ms-8 lg:ms-12 xl:ms-16 rtl:md:ms-0 rtl:md:me-8 rtl:lg:me-12 rtl:xl:me-16"
+            className="space-y-3 sm:space-y-4 md:space-y-5 ms-2 sm:ms-4 md:ms-8 lg:ms-12 xl:ms-16"
           >
             <div className="md:hidden flex justify-start">
               <img
