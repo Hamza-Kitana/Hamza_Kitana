@@ -23,6 +23,57 @@ export interface Project {
 
 export const featuredProjects: Project[] = [
   {
+    id: 48,
+    category: 'featured',
+    liveUrl: 'https://milk-bites.vercel.app/',
+    title: loc('Milk Bites — Lactation Cookies Store', 'Milk Bites — متجر كوكيز الرضاعة'),
+    subtitle: loc('E-commerce • Cart • Arabic Brand Story', 'متجر إلكتروني • سلة • قصة علامة عربية'),
+    description: loc(
+      'A full product website for Milk Bites — lactation cookies for pregnant and breastfeeding mothers. The experience combines warm storytelling, clear product benefits, add-to-cart flow, and cash-on-delivery checkout in an Arabic-first brand identity.',
+      'موقع منتج كامل لـ Milk Bites — كوكيز رضاعة للحوامل والمرضعات. التجربة تجمع قصة دافئة للعلامة، فوائد واضحة للمنتج، مسار إضافة للسلة، وطلب بالدفع عند الاستلام ضمن هوية عربية أولاً.'
+    ),
+    technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'E-commerce'],
+    image: '/projects/project-milkbites.jpg',
+    details: locList(
+      [
+        'Single-product store architecture focused on one clear offer for mothers',
+        'Arabic landing story with sections for benefits, ingredients, and real-life use',
+        'Product card with price, add-to-cart CTA, and direct order intent',
+        'Designed for trust: warm visuals, simple messaging, and COD purchase flow',
+        'Brand touchpoints for Instagram and admin access for content or orders',
+      ],
+      [
+        'هيكل متجر بمنتج واحد يركز على عرض واضح ومباشر للأمهات',
+        'صفحة عربية قصصية تشرح الفوائد والمكونات والاستخدام اليومي',
+        'بطاقة منتج مع السعر وزر إضافة للسلة ومسار طلب مباشر',
+        'تصميم مبني على الثقة: صور دافئة، رسالة بسيطة، ودفع عند الاستلام',
+        'نقاط تواصل للعلامة مثل إنستغرام مع دخول إدارة للطلبات أو المحتوى',
+      ]
+    ),
+    challenges: locList(
+      [
+        'Presenting a health-support product without sounding like medical claims or dry supplements',
+        'Solution: Keep the tone lifestyle-first with transparent ingredients, clear audience fit, and a lightweight shopping flow',
+      ],
+      [
+        'عرض منتج داعم للصحة بدون لغة ادعاءات طبية أو إحساس مكمل جاف',
+        'الحل: نبرة أسلوب حياة مع مكونات واضحة، جمهور محدد، ومسار شراء خفيف',
+      ]
+    ),
+    results: locList(
+      [
+        'Live store at milk-bites.vercel.app',
+        'Mothers can understand value quickly and order in a few steps',
+        'Strong niche branding around pregnancy and lactation support',
+      ],
+      [
+        'متجر حي على milk-bites.vercel.app',
+        'الأمهات يفهمن الفائدة بسرعة ويطلبن خلال خطوات بسيطة',
+        'هوية متخصصة قوية حول دعم الحمل والرضاعة',
+      ]
+    ),
+  },
+  {
     id: 47,
     category: 'featured',
     liveUrl: 'https://womenssalon.vercel.app/',
