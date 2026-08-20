@@ -23,6 +23,57 @@ export interface Project {
 
 export const featuredProjects: Project[] = [
   {
+    id: 49,
+    category: 'featured',
+    liveUrl: 'https://samurai-rho.vercel.app/',
+    title: loc('Samurai Realm — FiveM Maps & Scripts Store', 'ساموراي — متجر خرائط وسكربتات FiveM'),
+    subtitle: loc('Premium FiveM Store • Instant Download • Cart & Login', 'متجر FiveM فاخر • تحميل فوري • سلة وتسجيل دخول'),
+    description: loc(
+      'A premium Arabic store for FiveM (GTA) maps, scripts, vehicles, and clothing — Samurai Realm. Server owners browse a cinematic elite catalog, add products to cart, pay, and get instant download after purchase — built for high-conversion gaming commerce, not a generic marketplace look.',
+      'متجر عربي فاخر لخرائط وسكربتات ومركبات وملابس FiveM (GTA) — ساموراي. أصحاب السيرفرات يتصفحون كتالوج نخبة سينمائي، يضيفون للسلة، يدفعون، ويحمّلون مباشرة بعد الشراء — مبني لتجارة ألعاب عالية التحويل، وليس شكله متجر عام.'
+    ),
+    technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'E-commerce', 'FiveM'],
+    image: '/projects/project-samurai.jpg',
+    details: locList(
+      [
+        'Cinematic Samurai-branded FiveM store for maps, scripts, vehicles, and clothing',
+        'Instant install / direct download flow after payment',
+        'Cart, login, language toggle, and popular-products shortcuts',
+        'Arabic-first elite identity aimed at server owners upgrading their GTA FiveM world',
+        'Store catalog with categories so buyers find the right asset without Discord chaos',
+      ],
+      [
+        'متجر FiveM بهوية ساموراي سينمائية للخرائط والسكربتات والمركبات والملابس',
+        'مسار تركيب فوري / تحميل مباشر بعد الدفع',
+        'سلة، تسجيل دخول، تبديل لغة، واختصارات للأكثر طلباً',
+        'هوية نخبة عربية أولاً موجّهة لأصحاب السيرفرات لترقية عالم GTA FiveM',
+        'كتالوج متجر بفئات حتى المشتري يجد الأصل المناسب بدون فوضى الديسكورد',
+      ]
+    ),
+    challenges: locList(
+      [
+        'Selling digital FiveM assets with trust and premium feel — not a cheap script dump',
+        'Solution: Elite cinematic branding, clear catalog structure, and a purchase path that ends in instant download',
+      ],
+      [
+        'بيع أصول FiveM رقمية بثقة وإحساس فاخر — وليس كومة سكربتات رخيصة',
+        'الحل: هوية سينمائية نخبة، كتالوج واضح، ومسار شراء ينتهي بتحميل فوري',
+      ]
+    ),
+    results: locList(
+      [
+        'Live store at samurai-rho.vercel.app',
+        'Server owners can buy maps and scripts in a professional checkout flow',
+        'A distinctive FiveM commerce identity that stands out from generic stores',
+      ],
+      [
+        'متجر لايف على samurai-rho.vercel.app',
+        'أصحاب السيرفرات يشترون الخرائط والسكربتات بمسار شراء احترافي',
+        'هوية تجارة FiveM مميزة تتفوق على المتاجر العامة',
+      ]
+    ),
+  },
+  {
     id: 48,
     category: 'featured',
     liveUrl: 'https://milk-bites.vercel.app/',
