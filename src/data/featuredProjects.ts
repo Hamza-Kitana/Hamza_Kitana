@@ -23,6 +23,65 @@ export interface Project {
 
 export const featuredProjects: Project[] = [
   {
+    id: 50,
+    category: 'featured',
+    liveUrl: 'https://clm-phi.vercel.app/',
+    acronym: 'CLM',
+    fullName: loc('Contract Lifecycle Management', 'إدارة دورة حياة العقود'),
+    meaning: loc(
+      'A single platform that manages every contract stage — from request and drafting to legal review, approvals, negotiation, signing, execution, renewal, and archival.',
+      'منصة واحدة تدير كل مراحل العقد — من الطلب والصياغة إلى المراجعة القانونية والموافقات والتفاوض والتوقيع والتنفيذ والتجديد والأرشفة.'
+    ),
+    title: loc('Sijil — Contract Lifecycle Management', 'سِجل — نظام إدارة دورة حياة العقود'),
+    subtitle: loc('Request → Review → Approve → Sign → Renew', 'طلب ← مراجعة ← موافقة ← توقيع ← تجديد'),
+    description: loc(
+      'Sijil is a polished Arabic-first CLM platform for teams that need contracts under control — not scattered across email and folders. One dashboard runs the full lifecycle: intake, drafting, legal review, multi-step approvals, version control, e-signature, obligation tracking, proactive renewal alerts, and a permanent audit trail.',
+      'سِجل منصة CLM عربية أنيقة للفرق اللي بدها العقود تحت السيطرة — مش متفرقة على الإيميل والمجلدات. لوحة واحدة تدير دورة الحياة كاملة: الطلب، الصياغة، المراجعة القانونية، موافقات متعددة، إدارة النسخ، التوقيع الإلكتروني، متابعة الالتزامات، تنبيهات تجديد استباقية، وسجل تدقيق دائم.'
+    ),
+    technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'CLM', 'Dashboard'],
+    image: '/projects/project-sijil.jpg',
+    details: locList(
+      [
+        '9-step contract lifecycle: request, create, review, approvals, negotiate, sign, execute, monitor, renew/expire',
+        'Executive dashboard with live contract value, status, and interactive charts',
+        'Client profiles that centralize every contract and relationship in one place',
+        'Smart approval routing: legal → finance → management with full audit log',
+        'Version control for negotiation (V1, V2…) with change history and ownership',
+        'Proactive date alerts, renewal/cancellation flows, and permanent contract archive',
+      ],
+      [
+        'دورة حياة من 9 خطوات: طلب، إنشاء، مراجعة، موافقات، تفاوض، توقيع، تنفيذ، متابعة، تجديد/انتهاء',
+        'لوحة تحكم تنفيذية بقيم العقود والحالات ورسوم بيانية تفاعلية',
+        'ملفات عملاء تجمع كل عقد وعلاقة في مكان واحد',
+        'مسار موافقات ذكي: قانوني ← مالية ← إدارة مع سجل تدقيق كامل',
+        'إدارة نسخ التفاوض (V1، V2…) مع تاريخ التغيير ومن غيّره',
+        'تنبيهات تواريخ استباقية، تجديد/إلغاء، وأرشيف دائم للعقود',
+      ]
+    ),
+    challenges: locList(
+      [
+        'Enterprise contract workflows are complex — teams lose track of who approved what and which version is final',
+        'Solution: A visual lifecycle pipeline, versioned negotiation, role-based approvals, and audit-ready history in one calm Arabic interface',
+      ],
+      [
+        'مسارات العقود المؤسسية معقدة — الفرق تضيع من وافق على ماذا وأي نسخة نهائية',
+        'الحل: مسار بصري لدورة الحياة، تفاوض بنسخ محفوظة، موافقات حسب الدور، وتاريخ جاهز للتدقيق في واجهة عربية هادئة',
+      ]
+    ),
+    results: locList(
+      [
+        'Live CLM platform at clm-phi.vercel.app',
+        'Teams run a full contract cycle in minutes instead of email chains',
+        'Reduced risk with proactive renewals, obligations tracking, and permanent archive',
+      ],
+      [
+        'منصة CLM حية على clm-phi.vercel.app',
+        'الفرق تدير دورة عقد كاملة خلال دقائق بدل سلاسل الإيميل',
+        'تقليل المخاطر مع تجديد استباقي ومتابعة التزامات وأرشيف دائم',
+      ]
+    ),
+  },
+  {
     id: 49,
     category: 'featured',
     liveUrl: 'https://samurai-rho.vercel.app/',
