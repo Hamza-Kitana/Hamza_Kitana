@@ -23,6 +23,57 @@ export interface Project {
 
 export const featuredProjects: Project[] = [
   {
+    id: 51,
+    category: 'featured',
+    liveUrl: 'https://harmony-two-silk.vercel.app/',
+    title: loc('Harmony Engineering Consultant — Dubai Corporate Site', 'هارموني للاستشارات الهندسية — موقع تعريفي بدبي'),
+    subtitle: loc('3D Motion • Design & Supervision • Bilingual', 'حركة ثلاثية الأبعاد • تصميم وإشراف • ثنائي اللغة'),
+    description: loc(
+      'A premium corporate showcase for Harmony Engineering Consultant in Dubai — cinematic 3D motion, gold-on-dark branding, and a full company story from hero to services, process, projects, and contact. Built to position the firm as a high-end design and supervision partner for architectural, structural, and MEP work across the UAE.',
+      'موقع تعريفي فاخر لـ Harmony Engineering Consultant في دبي — حركة سينمائية ثلاثية الأبعاد، هوية ذهبية على خلفية داكنة، وقصة شركة كاملة من الهيرو للخدمات وطريقة العمل والمشاريع والتواصل. مبني ليقدّم الشركة كشريك تصميم وإشراف راقٍ للأعمال المعمارية والإنشائية وMEP في الإمارات.'
+    ),
+    technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Framer Motion', '3D Animation'],
+    image: '/projects/project-harmony.jpg',
+    details: locList(
+      [
+        'Cinematic landing with animated 3D tower visuals and a luxury engineering brand feel',
+        'Full corporate sections: About, Services, Process, Projects, and Contact',
+        'Service tracks: Architectural, Structural, MEP, and Permits & Licensing',
+        '4-step workflow from brief to design, approvals, and site handover',
+        'Project portfolio cards, live stats, bilingual EN/AR toggle, and Dubai office details',
+      ],
+      [
+        'صفحة افتتاحية سينمائية بصور ثلاثية الأبعاد متحركة لهوية هندسية فاخرة',
+        'أقسام شركة كاملة: من نحن، الخدمات، طريقة العمل، المشاريع، والتواصل',
+        'مسارات خدمات: معماري، إنشائي، MEP، والتراخيص والموافقات',
+        'مسار عمل من 4 خطوات: من الدراسة للتصميم والموافقات وتسليم الموقع',
+        'بطاقات مشاريع، إحصائيات حية، تبديل عربي/إنجليزي، وتفاصيل مكتب دبي',
+      ]
+    ),
+    challenges: locList(
+      [
+        'Engineering consultancies often look like static brochure sites — hard to feel premium or memorable',
+        'Solution: Cinematic 3D motion, disciplined gold typography, and a scroll story that sells precision without clutter',
+      ],
+      [
+        'شركات الاستشارات الهندسية غالباً تبدو ككتيب ثابت — صعب تكون فاخرة أو مميزة',
+        'الحل: حركة ثلاثية الأبعاد سينمائية، طباعة ذهبية منضبطة، وقصة تمرير تبيع الدقة بدون فوضى',
+      ]
+    ),
+    results: locList(
+      [
+        'Live corporate site at harmony-two-silk.vercel.app',
+        'Clients understand services and process in one elegant scroll',
+        'A distinctive Dubai engineering brand that stands out from generic consultancy sites',
+      ],
+      [
+        'موقع شركة حي على harmony-two-silk.vercel.app',
+        'العملاء يفهمون الخدمات وطريقة العمل في تمرير أنيق واحد',
+        'هوية استشارات هندسية مميزة في دبي تتفوق على المواقع العامة',
+      ]
+    ),
+  },
+  {
     id: 50,
     category: 'featured',
     liveUrl: 'https://clm-phi.vercel.app/',
