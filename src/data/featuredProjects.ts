@@ -23,6 +23,56 @@ export interface Project {
 
 export const featuredProjects: Project[] = [
   {
+    id: 53,
+    category: 'featured',
+    title: loc('Delivery Dispatch App — On-Demand Courier Orders', 'تطبيق التوصيل — طلبات شحن فورية للمتاجر'),
+    subtitle: loc('Mobile App • Merchant Orders • Live Dispatch', 'تطبيق موبايل • طلبات التجار • توزيع فوري'),
+    description: loc(
+      'A professional mobile delivery system for merchants who sell online and need a courier company — not a complicated logistics platform. The store owner opens the app, creates an order, enters pickup and drop-off, and the delivery company picks it up and delivers. Built as a clean, high-end mobile experience for real daily dispatch.',
+      'تطبيق موبايل احترافي للتوصيل: التاجر اللي عنده صفحة بيع ويحتاج شركة توصيل يدخل التطبيق، يطلب أوردر، يحدد من وين لوين، وشركة التوصيل تستلم وتوصّل. مش منصة لوجستيات معقدة — تجربة موبايل مرتبة وسريعة للاستخدام اليومي.'
+    ),
+    technologies: ['React Native', 'TypeScript', 'Mobile App', 'Dispatch', 'Orders API'],
+    image: '/projects/project-driver.jpg',
+    details: locList(
+      [
+        'Merchant-first flow: open the app, create an order, set pickup and destination',
+        'Designed for store owners who already sell online and only need courier fulfillment',
+        'Clear order details: address, notes, and delivery status without WhatsApp chaos',
+        'Dispatch-ready structure so a delivery company can assign and complete runs',
+        'Professional mobile UX focused on speed — order in a few taps, not a long form',
+      ],
+      [
+        'مسار للتاجر أولاً: افتح التطبيق، أنشئ طلب، حدّد الاستلام والتوصيل',
+        'مصمم لأصحاب المتاجر اللي يبيعون أونلاين ويحتاجون شركة توصيل فقط',
+        'تفاصيل طلب واضحة: العنوان، الملاحظات، وحالة التوصيل بدون فوضى واتساب',
+        'هيكل جاهز للتوزيع حتى شركة التوصيل تعيّن السائق وتكمل الرحلة',
+        'تجربة موبايل احترافية وسريعة — طلب بعدة نقرات، مش نموذج طويل',
+      ]
+    ),
+    challenges: locList(
+      [
+        'Merchants need courier help fast, but most logistics apps feel heavy and enterprise-only',
+        'Solution: A lightweight mobile order path — sell on your page, dispatch from the app, deliver with a courier company',
+      ],
+      [
+        'التجار يحتاجون توصيل سريع، بس أغلب تطبيقات اللوجستيات ثقيلة ومعقدة',
+        'الحل: مسار طلب موبايل خفيف — بيع من صفحتك، اطلب من التطبيق، ووصّل عبر شركة التوصيل',
+      ]
+    ),
+    results: locList(
+      [
+        'Mobile delivery workflow built for merchants and courier partners',
+        'Faster order creation with clear pickup/drop-off details',
+        'A professional product ready to connect store sales with real-world delivery',
+      ],
+      [
+        'مسار توصيل موبايل مبني للتجار وشركات التوصيل',
+        'إنشاء طلب أسرع مع تفاصيل استلام وتوصيل واضحة',
+        'منتج احترافي يربط مبيعات المتجر بالتوصيل على أرض الواقع',
+      ]
+    ),
+  },
+  {
     id: 52,
     category: 'featured',
     liveUrl: 'https://moaqar.vercel.app/',
@@ -134,11 +184,11 @@ export const featuredProjects: Project[] = [
       'A single platform that manages every contract stage — from request and drafting to legal review, approvals, negotiation, signing, execution, renewal, and archival.',
       'منصة واحدة تدير كل مراحل العقد — من الطلب والصياغة إلى المراجعة القانونية والموافقات والتفاوض والتوقيع والتنفيذ والتجديد والأرشفة.'
     ),
-    title: loc('Sijil — Contract Lifecycle Management', 'سِجل — نظام إدارة دورة حياة العقود'),
+    title: loc('CLM — Contract Lifecycle Management', 'CLM — نظام إدارة دورة حياة العقود'),
     subtitle: loc('Request → Review → Approve → Sign → Renew', 'طلب ← مراجعة ← موافقة ← توقيع ← تجديد'),
     description: loc(
-      'Sijil is a polished Arabic-first CLM platform for teams that need contracts under control — not scattered across email and folders. One dashboard runs the full lifecycle: intake, drafting, legal review, multi-step approvals, version control, e-signature, obligation tracking, proactive renewal alerts, and a permanent audit trail.',
-      'سِجل منصة CLM عربية أنيقة للفرق اللي بدها العقود تحت السيطرة — مش متفرقة على الإيميل والمجلدات. لوحة واحدة تدير دورة الحياة كاملة: الطلب، الصياغة، المراجعة القانونية، موافقات متعددة، إدارة النسخ، التوقيع الإلكتروني، متابعة الالتزامات، تنبيهات تجديد استباقية، وسجل تدقيق دائم.'
+      'CLM (Sijil) is a polished Arabic-first Contract Lifecycle Management platform for teams that need contracts under control — not scattered across email and folders. One dashboard runs the full lifecycle: intake, drafting, legal review, multi-step approvals, version control, e-signature, obligation tracking, proactive renewal alerts, and a permanent audit trail.',
+      'CLM (سِجل) منصة عربية أنيقة لإدارة دورة حياة العقود للفرق اللي بدها العقود تحت السيطرة — مش متفرقة على الإيميل والمجلدات. لوحة واحدة تدير دورة الحياة كاملة: الطلب، الصياغة، المراجعة القانونية، موافقات متعددة، إدارة النسخ، التوقيع الإلكتروني، متابعة الالتزامات، تنبيهات تجديد استباقية، وسجل تدقيق دائم.'
     ),
     technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'CLM', 'Dashboard'],
     image: '/projects/project-sijil.jpg',
