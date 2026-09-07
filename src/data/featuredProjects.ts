@@ -32,7 +32,7 @@ export const featuredProjects: Project[] = [
       'تطبيق موبايل احترافي للتوصيل: التاجر اللي عنده صفحة بيع ويحتاج شركة توصيل يدخل التطبيق، يطلب أوردر، يحدد من وين لوين، وشركة التوصيل تستلم وتوصّل. مش منصة لوجستيات معقدة — تجربة موبايل مرتبة وسريعة للاستخدام اليومي.'
     ),
     technologies: ['React Native', 'TypeScript', 'Mobile App', 'Dispatch', 'Orders API'],
-    image: '/projects/project-driver.jpg',
+    image: '/projects/project-delivery.jpg',
     details: locList(
       [
         'Merchant-first flow: open the app, create an order, set pickup and destination',
