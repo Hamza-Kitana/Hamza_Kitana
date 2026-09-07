@@ -23,6 +23,57 @@ export interface Project {
 
 export const featuredProjects: Project[] = [
   {
+    id: 52,
+    category: 'featured',
+    liveUrl: 'https://moaqar.vercel.app/',
+    title: loc('Al-Moaqar — Complaints & Field Service Ops', 'الموقر — نظام الشكاوى وإدارة الفرق الميدانية'),
+    subtitle: loc('Complaint Intake • Staff Follow-up • Field Coverage', 'استقبال شكاوى • متابعة موظفين • تغطية ميدانية'),
+    description: loc(
+      'An operations platform for Al-Moaqar Trading Company — printing-press and institutional equipment maintenance across Jordan. Customers submit complaints online, while staff log in to track cases, assign field technicians, and close issues with clear follow-up across Amman, Ajloun, and Irbid.',
+      'منصة تشغيل لشركة الموقر التجارية — صيانة مطابع وتجهيزات مؤسسات في الأردن. العملاء يقدّمون الشكاوى أونلاين، والموظفون يدخلون لمتابعة الحالات، توزيع الفنيين الميدانيين، وإغلاق المشاكل بمتابعة واضحة عبر عمان وعجلون وإربد.'
+    ),
+    technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Operations Dashboard'],
+    image: '/projects/project-moaqar.jpg',
+    details: locList(
+      [
+        'Public complaint intake so institutions report issues without phone-tag chaos',
+        'Staff login for case handling, assignment, and resolution tracking',
+        'Field coverage model across Amman, Ajloun, and Irbid maintenance teams',
+        'Company site that explains services: inspection, repair, parts, and follow-up',
+        'Dark corporate brand with clear CTAs for complaint submission and contact',
+      ],
+      [
+        'استقبال شكاوى عام حتى المؤسسات تبلغ عن الأعطال بدون فوضى الهاتف',
+        'تسجيل دخول موظفين لمتابعة الحالات والتوزيع وإغلاق الشكاوى',
+        'نموذج تغطية ميدانية لفرق عمان وعجلون وإربد',
+        'موقع شركة يشرح الخدمات: فحص، إصلاح، قطع غيار، ومتابعة',
+        'هوية شركات داكنة مع أزرار واضحة لتقديم شكوى والتواصل',
+      ]
+    ),
+    challenges: locList(
+      [
+        'Maintenance companies lose tickets between WhatsApp, calls, and field teams',
+        'Solution: One complaint pipeline plus staff workspace so every case has an owner and status',
+      ],
+      [
+        'شركات الصيانة تضيع البلاغات بين الواتساب والمكالمات والفرق الميدانية',
+        'الحل: مسار شكاوى واحد مع مساحة موظفين حتى لكل حالة مسؤول وحالة واضحة',
+      ]
+    ),
+    results: locList(
+      [
+        'Live ops site at moaqar.vercel.app',
+        'Customers submit complaints in one click; staff monitor and resolve in one flow',
+        'Clear national coverage story for institutional maintenance in Jordan',
+      ],
+      [
+        'موقع تشغيل حي على moaqar.vercel.app',
+        'العملاء يقدّمون الشكوى بضغطة؛ الموظفون يراقبون ويحلّون في مسار واحد',
+        'قصة تغطية وطنية واضحة لصيانة المؤسسات في الأردن',
+      ]
+    ),
+  },
+  {
     id: 51,
     category: 'featured',
     liveUrl: 'https://harmony-two-silk.vercel.app/',
