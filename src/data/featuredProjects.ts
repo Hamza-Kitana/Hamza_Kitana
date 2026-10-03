@@ -23,6 +23,159 @@ export interface Project {
 
 export const featuredProjects: Project[] = [
   {
+    id: 56,
+    category: 'featured',
+    liveUrl: 'https://shr-neon.vercel.app/',
+    title: loc('Novarc — Corporate Engineering Group Website', 'Novarc — موقع شركة هندسة وبنية تحتية'),
+    subtitle: loc('Corporate Site • Services • Projects • Team', 'موقع شركة • خدمات • مشاريع • فريق'),
+    description: loc(
+      'A polished corporate website for Novarc, an engineering and strategy group building intelligent infrastructure for banks, cities, and enterprises. The site tells the full company story — mission, values, six service disciplines, case studies, a six-step process, testimonials, team, and a project enquiry form — with a clean editorial layout, smooth motion, and an Arabic/English toggle.',
+      'موقع شركة احترافي لـ Novarc، مجموعة هندسة واستراتيجية تبني بنية تحتية ذكية للبنوك والمدن والشركات الكبرى. الموقع يحكي قصة الشركة كاملة — الرسالة والقيم، ست خدمات، دراسات حالة، منهجية عمل من 6 خطوات، آراء العملاء، الفريق، ونموذج طلب مشروع — بتصميم تحريري مرتب وحركة ناعمة وتبديل عربي/إنجليزي.'
+    ),
+    technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'i18n'],
+    image: '/projects/project-novarc.jpg',
+    details: locList(
+      [
+        'Animated intro loader and an editorial hero with bold gradient typography',
+        'Company story with timeline, mission, vision, and core values',
+        'Six interactive service disciplines: strategy, cloud, AI & data, product, security, design',
+        'Case-study carousel, six-step process, client logos, and testimonials',
+        'Team section, contact details, map link, and a full project enquiry form',
+      ],
+      [
+        'شاشة تحميل متحركة وهيرو تحريري بخط عريض وتدرج لوني',
+        'قصة الشركة مع خط زمني، الرسالة، الرؤية، والقيم',
+        'ست خدمات تفاعلية: استراتيجية، سحابة، ذكاء اصطناعي وبيانات، منتجات، أمن، تصميم',
+        'عارض دراسات حالة، منهجية 6 خطوات، شعارات العملاء، وآراء العملاء',
+        'قسم الفريق، بيانات التواصل، رابط الخريطة، ونموذج طلب مشروع كامل',
+      ]
+    ),
+    challenges: locList(
+      [
+        'Fitting a lot of corporate content on one site without it feeling heavy or cluttered',
+        'Solution: Numbered sections, generous spacing, and scroll-driven motion that guide the reader one idea at a time',
+      ],
+      [
+        'عرض محتوى شركة كبير في موقع واحد بدون ما يحس الزائر بالثقل أو الزحمة',
+        'الحل: أقسام مرقّمة، مساحات مريحة، وحركة مرتبطة بالتمرير توصل فكرة وحدة بكل مرة',
+      ]
+    ),
+    results: locList(
+      [
+        'Live corporate site at shr-neon.vercel.app',
+        'A premium, trustworthy brand presence for an enterprise-level company',
+        'Visitors can move from discovering services to sending an enquiry in one smooth path',
+      ],
+      [
+        'موقع شركة حي على shr-neon.vercel.app',
+        'حضور فاخر وموثوق لشركة بمستوى المؤسسات الكبرى',
+        'الزائر ينتقل من اكتشاف الخدمات لإرسال طلب مشروع بمسار واحد سلس',
+      ]
+    ),
+  },
+  {
+    id: 55,
+    category: 'featured',
+    liveUrl: 'https://mt3am.vercel.app/',
+    title: loc('Ember & Salt — Live-Fire Restaurant', 'Ember & Salt — موقع مطعم فاخر'),
+    subtitle: loc('Menu • Online Order • Offers • Reservations', 'منيو • طلب أونلاين • عروض • حجز طاولة'),
+    description: loc(
+      'A high-end website for Ember & Salt, a live-fire restaurant in Amman. Guests explore signature dishes, browse a tabbed menu, add items to an order, claim weekly offers, read the chef\'s story, and book a table — all inside a cinematic dark-and-ember design with an app-style bottom navigation and Arabic/English support.',
+      'موقع فاخر جداً لمطعم Ember & Salt للطبخ على النار في عمّان. الزبون يكتشف الأطباق المميزة، يتصفح المنيو بالأقسام، يضيف للطلب، يستفيد من العروض الأسبوعية، يقرأ قصة الشيف، ويحجز طاولة — كله بتصميم سينمائي داكن بلون الجمر، مع شريط تنقل سفلي مثل التطبيقات ودعم عربي/إنجليزي.'
+    ),
+    technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Online Ordering'],
+    image: '/projects/project-ember.jpg',
+    details: locList(
+      [
+        'Cinematic hero with layered typography over a signature burger',
+        'Featured dishes and a tabbed menu: burgers, pizza, mains, appetizers, drinks, desserts',
+        'Add-to-order cart with a floating order button and app-style bottom navigation',
+        'Weekly offers, today\'s special, guest reviews, gallery, and the chef\'s story',
+        'Visit section with address, opening hours, social links, table booking, and newsletter',
+      ],
+      [
+        'هيرو سينمائي بخط متداخل فوق البرغر المميز',
+        'أطباق مميزة ومنيو بأقسام: برغر، بيتزا، أطباق رئيسية، مقبلات، مشروبات، حلويات',
+        'سلة طلب مع زر طلب عائم وشريط تنقل سفلي مثل التطبيقات',
+        'عروض أسبوعية، طبق اليوم، آراء الزبائن، معرض صور، وقصة الشيف',
+        'قسم الزيارة مع العنوان، أوقات الدوام، السوشال، حجز طاولة، والنشرة البريدية',
+      ]
+    ),
+    challenges: locList(
+      [
+        'Making a restaurant site feel like a fine-dining experience while still being fast to order from',
+        'Solution: Premium visuals for the brand story, plus a simple cart and bottom nav so ordering takes a few taps',
+      ],
+      [
+        'نخلي موقع المطعم يحسس بتجربة مطعم فاخر، وبنفس الوقت الطلب منه سريع',
+        'الحل: صور وهوية فاخرة لقصة المطعم، مع سلة بسيطة وشريط تنقل سفلي حتى الطلب ياخذ كم نقرة',
+      ]
+    ),
+    results: locList(
+      [
+        'Live restaurant site at mt3am.vercel.app',
+        'Guests can browse, order, and book a table from their phone',
+        'A brand presence that matches a high-end dining room',
+      ],
+      [
+        'موقع مطعم حي على mt3am.vercel.app',
+        'الزبون يتصفح ويطلب ويحجز طاولة من موبايله',
+        'حضور يليق بمطعم فاخر',
+      ]
+    ),
+  },
+  {
+    id: 54,
+    category: 'featured',
+    liveUrl: 'https://matagar.vercel.app/',
+    title: loc('VYBE — Smart Watches & Phone Accessories Store', 'VYBE — متجر ساعات ذكية وإكسسوارات موبايل'),
+    subtitle: loc('E-commerce • 60+ Products • Cart • Instagram Orders', 'متجر إلكتروني • +60 منتج • سلة • طلب عبر إنستغرام'),
+    description: loc(
+      'A bold e-commerce website for VYBE, a store selling smart watches, earbuds, chargers and power banks, cases, speakers, and smart accessories. Shoppers browse categories, pick colors and details for each product, add items to the cart, and copy their order to send on Instagram — all in a modern neon-on-dark design built mobile-first.',
+      'موقع متجر إلكتروني جريء لـ VYBE، يبيع ساعات ذكية، سماعات، شواحن وباور بانك، كفرات، سبيكرات، وإكسسوارات ذكية. الزبون يتصفح الأقسام، يختار اللون والتفاصيل لكل منتج، يضيف للسلة، وينسخ طلبه ويبعثه على إنستغرام — بتصميم عصري نيون على خلفية داكنة ومبني للموبايل أولاً.'
+    ),
+    technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'E-commerce'],
+    image: '/projects/project-vybe.jpg',
+    details: locList(
+      [
+        'Six categories: smart watches, earbuds, chargers & power banks, cases, speakers, smart accessories',
+        'Catalog of 60+ products with a page for each product, colors, and details',
+        'Cart that builds a ready-to-copy order message for Instagram',
+        'Animated hero with a 3D-style phone, category chips, and scrolling marquee',
+        'App-style bottom navigation with a central cart button for fast mobile shopping',
+      ],
+      [
+        'ست أقسام: ساعات ذكية، سماعات، شواحن وباور بانك، كفرات، سبيكرات، إكسسوارات ذكية',
+        'كتالوج +60 منتج مع صفحة لكل منتج وألوانه وتفاصيله',
+        'سلة تجهّز رسالة طلب جاهزة للنسخ والإرسال على إنستغرام',
+        'هيرو متحرك بموبايل ثلاثي الأبعاد وأزرار أقسام وشريط متحرك',
+        'شريط تنقل سفلي مثل التطبيقات مع زر سلة بالنص لتسوق سريع من الموبايل',
+      ]
+    ),
+    challenges: locList(
+      [
+        'Selling through Instagram DMs without a payment gateway, while still feeling like a real store',
+        'Solution: A full catalog and cart that turn the selection into a clean order message the customer sends in one tap',
+      ],
+      [
+        'البيع عن طريق رسائل إنستغرام بدون بوابة دفع، وبنفس الوقت يكون إحساس متجر حقيقي',
+        'الحل: كتالوج وسلة كاملة تحوّل اختيارات الزبون لرسالة طلب مرتبة يبعثها بنقرة',
+      ]
+    ),
+    results: locList(
+      [
+        'Live store at matagar.vercel.app',
+        'Customers browse 60+ products and send a clear order in seconds',
+        'A youthful, trend-driven brand that stands out from typical accessory shops',
+      ],
+      [
+        'متجر حي على matagar.vercel.app',
+        'الزبون يتصفح +60 منتج ويبعث طلب واضح خلال ثوانٍ',
+        'هوية شبابية تواكب الترند وتتميز عن محلات الإكسسوارات العادية',
+      ]
+    ),
+  },
+  {
     id: 53,
     category: 'featured',
     title: loc('Delivery Dispatch App — On-Demand Courier Orders', 'تطبيق التوصيل — طلبات شحن فورية للمتاجر'),
