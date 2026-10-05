@@ -23,6 +23,57 @@ export interface Project {
 
 export const featuredProjects: Project[] = [
   {
+    id: 57,
+    category: 'featured',
+    liveUrl: 'https://cafe-beige-tau.vercel.app/',
+    title: loc('Layali — Night Café & Lounge in Amman', 'ليالي — موقع كافيه ولاونج في عمّان'),
+    subtitle: loc('Immersive Scroll Story • Menu • Reservations', 'تجربة تمرير تفاعلية • منيو • حجز طاولة'),
+    description: loc(
+      'An immersive, story-driven website for Layali, a night café on Rainbow Street in Amman. Visitors "walk in" through an animated arched door, then scroll through the whole night: the coffee lab, a sideways drinks bar, the shisha lounge, billiards room, cards table, seating areas, a weekly events calendar, the full menu, guest reviews, and a closing "last call" with reservation and directions — all in warm gold-on-dark styling with Arabic/English support.',
+      'موقع تفاعلي بأسلوب قصة لكافيه ليالي في شارع الرينبو بعمّان. الزائر "يدخل" من باب مقوّس متحرك، وبعدها يعيش السهرة كاملة بالتمرير: مختبر القهوة، بار مشروبات يتحرك بالعرض، لاونج الأرجيلة، غرفة البلياردو، طاولة الشدّة، أماكن الجلوس، برنامج فعاليات الأسبوع، المنيو الكامل، آراء الزبائن، وختام "آخر طلب" مع الحجز والاتجاهات — بتصميم ذهبي دافئ على خلفية داكنة ودعم عربي/إنجليزي.'
+    ),
+    technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Scroll Animations'],
+    image: '/projects/project-layali.jpg',
+    details: locList(
+      [
+        'Cinematic intro: animated arched door, loading counter, and a "walk in" entry',
+        'Scroll chapters for coffee, drinks, shisha, billiards, cards, and seating areas',
+        'Interactive table scene — hover items to open coffee, desserts, drinks, shisha, and games',
+        'Weekly events calendar, full bilingual menu with prices, and live guest reviews',
+        'Night timeline, memories gallery, reservation, WhatsApp, and Google Maps directions',
+      ],
+      [
+        'دخول سينمائي: باب مقوّس متحرك، عدّاد تحميل، وزر "ادخل"',
+        'فصول بالتمرير للقهوة والمشروبات والأرجيلة والبلياردو والشدّة وأماكن الجلوس',
+        'طاولة تفاعلية — مرّر على العناصر لفتح القهوة والحلويات والمشروبات والأرجيلة والألعاب',
+        'برنامج فعاليات أسبوعي، منيو كامل بالعربي والإنجليزي مع الأسعار، وآراء الزبائن',
+        'خط زمني للسهرة، معرض لحظات، حجز طاولة، واتساب، واتجاهات على Google Maps',
+      ]
+    ),
+    challenges: locList(
+      [
+        'A café website usually feels like a static menu — hard to sell the atmosphere of a night out',
+        'Solution: Turn the site into a guided night — each scroll chapter is a room of the café, ending with a "last call" that drives reservations',
+      ],
+      [
+        'موقع الكافيه عادةً يكون منيو ثابت — صعب يوصّل جو السهرة',
+        'الحل: حوّلنا الموقع لسهرة مُرشدة — كل فصل بالتمرير غرفة من الكافيه، وينتهي بـ"آخر طلب" يشجّع على الحجز',
+      ]
+    ),
+    results: locList(
+      [
+        'Live café site at cafe-beige-tau.vercel.app',
+        'Guests feel the place before they visit and can reserve a table in one tap',
+        'A memorable, premium brand experience that stands out from typical café pages',
+      ],
+      [
+        'موقع كافيه حي على cafe-beige-tau.vercel.app',
+        'الزبون يحس بالمكان قبل ما يزوره ويحجز طاولة بنقرة',
+        'تجربة علامة فاخرة لا تُنسى تتميز عن صفحات الكافيهات العادية',
+      ]
+    ),
+  },
+  {
     id: 56,
     category: 'featured',
     liveUrl: 'https://shr-neon.vercel.app/',
