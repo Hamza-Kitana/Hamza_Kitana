@@ -23,6 +23,108 @@ export interface Project {
 
 export const featuredProjects: Project[] = [
   {
+    id: 59,
+    category: 'featured',
+    liveUrl: 'https://quantum-iota-taupe.vercel.app/',
+    title: loc('Quantum — Software, AI & Arduino Tech Lab', 'Quantum — شركة برمجيات وذكاء اصطناعي وأردوينو'),
+    subtitle: loc('Company Site • Services • Courses • Store', 'موقع شركة • خدمات • دورات • متجر'),
+    description: loc(
+      'A futuristic company website for Quantum, a tech lab in Amman that builds software, trains AI, wires Arduino hardware, and teaches courses. The home page opens with a booting animation and live code lines, then leads visitors through seven sections — About, Software, AI, Arduino, Courses, Projects, and Contact — each with its own page, plus a five-step build process, featured work, stats, testimonials, and an Arabic/English toggle.',
+      'موقع شركة بطابع مستقبلي لـ Quantum، مختبر تقني في عمّان يبني برمجيات، يدرّب نماذج ذكاء اصطناعي، يجهّز قطع أردوينو، ويقدّم دورات. الصفحة الرئيسية تبدأ بأنيميشن تشغيل وأسطر كود متحركة، وبعدها تاخذ الزائر على سبع أقسام — من نحن، البرمجيات، الذكاء الاصطناعي، الأردوينو، الدورات، المشاريع، والتواصل — لكل قسم صفحته، مع منهجية عمل من 5 خطوات، أعمال مختارة، إحصائيات، آراء عملاء، وتبديل عربي/إنجليزي.'
+    ),
+    technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'i18n'],
+    image: '/projects/project-quantum.jpg',
+    details: locList(
+      [
+        'Booting-signal intro with animated circuit lines and floating code snippets',
+        'Seven dedicated pages: About, Software, AI, Arduino store, Courses, Projects, Contact',
+        'Five-stage build process: Discover, Design, Build, Launch, Support',
+        'Featured work cards (IoT greenhouse, clinic booking, AI vision counter, campus bot)',
+        'Animated stats, testimonials marquee, and app-style bottom navigation on mobile',
+      ],
+      [
+        'دخول بأنيميشن "تشغيل الإشارة" مع خطوط دوائر وأسطر كود متحركة',
+        'سبع صفحات مستقلة: من نحن، البرمجيات، الذكاء الاصطناعي، متجر الأردوينو، الدورات، المشاريع، التواصل',
+        'منهجية من 5 مراحل: اكتشاف، تصميم، بناء، إطلاق، دعم',
+        'بطاقات أعمال مختارة (بيت بلاستيكي ذكي، حجز عيادات، عدّاد زوار بالذكاء الاصطناعي، بوت جامعي)',
+        'إحصائيات متحركة، شريط آراء العملاء، وشريط تنقل سفلي مثل التطبيقات على الموبايل',
+      ]
+    ),
+    challenges: locList(
+      [
+        'Presenting four very different businesses — software, AI, hardware, and education — without confusing visitors',
+        'Solution: One "lab" identity with seven clear doors, so each visitor goes straight to the service they need',
+      ],
+      [
+        'عرض أربع مجالات مختلفة جداً — برمجيات، ذكاء اصطناعي، هاردوير، وتعليم — بدون ما يتلخبط الزائر',
+        'الحل: هوية "مختبر" وحدة مع سبع أبواب واضحة، حتى كل زائر يروح مباشرة للخدمة اللي بده إياها',
+      ]
+    ),
+    results: locList(
+      [
+        'Live company site at quantum-iota-taupe.vercel.app',
+        'Clients, students, and makers each find their path in a few taps',
+        'A bold tech identity that matches a modern AI and hardware lab',
+      ],
+      [
+        'موقع شركة حي على quantum-iota-taupe.vercel.app',
+        'العملاء والطلاب والهواة كل واحد يلاقي طريقه بكم نقرة',
+        'هوية تقنية جريئة تليق بمختبر حديث للذكاء الاصطناعي والهاردوير',
+      ]
+    ),
+  },
+  {
+    id: 58,
+    category: 'featured',
+    liveUrl: 'https://bare-tawny.vercel.app/',
+    title: loc('BARE — Lash Artist Portfolio Site', 'BARE — موقع تعريفي لفنانة رموش'),
+    subtitle: loc('Brand Showcase • Work Process • Instagram Bookings', 'هوية علامة • طريقة العمل • تواصل عبر إنستغرام'),
+    description: loc(
+      'A soft, elegant showcase website for BARE, a lash artist brand. Instead of a store, the site presents the work itself: a full-screen hero, the three-step approach (listen, design, apply), the signature soft result, a swipeable gallery of the work up close, and a single clear call to action that sends clients to Instagram for bookings and questions.',
+      'موقع تعريفي ناعم وأنيق لعلامة BARE لتركيب الرموش. بدل ما يكون متجر، الموقع يعرض الشغل نفسه: هيرو بصورة كاملة، طريقة العمل بثلاث خطوات (نسمعكِ، نصمّم، ننفّذ)، النتيجة الناعمة المميزة، معرض صور تسحبيه لتشوفي التفاصيل من قريب، وزر واحد واضح يوصل الزبونة لإنستغرام للحجز والاستفسار.'
+    ),
+    technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Framer Motion'],
+    image: '/projects/project-bare.jpg',
+    details: locList(
+      [
+        'Full-screen hero with close-up lash photography and refined serif branding',
+        'Three-step work story: listen to the client, design the lash map, apply with precision',
+        'Signature result section — soft, clean, feminine',
+        'Swipeable "up close" gallery showing the work in detail',
+        'All contact routed to Instagram (@barebyhn) with one clear call to action',
+      ],
+      [
+        'هيرو بصورة كاملة لرموش من قريب وشعار بخط أنيق',
+        'قصة الشغل بثلاث خطوات: نسمع الزبونة، نصمّم خارطة الرموش، وننفّذ بدقة',
+        'قسم النتيجة المميزة — ناعمة، مرتبة، وأنثوية',
+        'معرض صور بالسحب يعرض الشغل بالتفاصيل',
+        'كل التواصل يروح على إنستغرام (@barebyhn) بزر واحد واضح',
+      ]
+    ),
+    challenges: locList(
+      [
+        'A beauty artist needs to build trust in her work without the noise of a full online store',
+        'Solution: A calm, photo-led page that explains the process, shows real results, and ends in one Instagram action',
+      ],
+      [
+        'فنانة التجميل بدها تبني ثقة بشغلها بدون زحمة متجر إلكتروني كامل',
+        'الحل: صفحة هادئة معتمدة على الصور، تشرح طريقة العمل، تعرض نتائج حقيقية، وتنتهي بزر إنستغرام واحد',
+      ]
+    ),
+    results: locList(
+      [
+        'Live showcase at bare-tawny.vercel.app',
+        'Clients understand the style and process before they message',
+        'A soft, premium brand image that fits a lash studio',
+      ],
+      [
+        'موقع تعريفي حي على bare-tawny.vercel.app',
+        'الزبونة تفهم الستايل وطريقة الشغل قبل ما تبعت رسالة',
+        'صورة علامة ناعمة وفاخرة تناسب استوديو رموش',
+      ]
+    ),
+  },
+  {
     id: 57,
     category: 'featured',
     liveUrl: 'https://cafe-beige-tau.vercel.app/',
